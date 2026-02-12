@@ -1,0 +1,460 @@
+.stroke-icon {
+    color: #fff;
+}
+
+.fill-icon {
+    color: #fff;
+}
+
+.sidebar-wrapper .logo-wrapper {
+    background: #ffffff;
+}
+
+.sidebar-wrapper .logo-wrapper a img {
+    max-width: 80px;
+}
+
+.sidebar-wrapper .logo-icon-wrapper {
+    max-width: 80px;
+}
+
+.dataTables_length select {
+    min-width: 90px;
+    padding-right: 32px;
+    padding-left: 10px;
+}
+
+.dataTables_length label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dataTables_length select {
+    border-radius: 8px;
+    height: 38px;
+}
+
+.dataTables_paginate {
+    border: none !important;
+}
+
+.dataTables_paginate .pagination {
+    justify-content: center;
+}
+
+.dataTables_paginate .page-item.active .page-link {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+    color: #fff;
+}
+
+.dataTables_paginate .page-link {
+    color: var(--bs-success);
+    border-radius: 6px;
+}
+
+.dataTables_paginate .page-item.disabled .page-link {
+    color: #adb5bd;
+    pointer-events: none;
+    background-color: #f8f9fa;
+}
+
+/* ***************Reports ********************* */
+
+.reports-cards .col-xl-4,
+.reports-cards .col-lg-6,
+.reports-cards .col-md-6,
+.reports-cards .col-12 {
+    display: flex;
+}
+
+
+.report-card {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1560px) {
+  .report-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .report-card p {
+    font-size: 14px;
+  }
+}
+
+
+.report-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.report-card h5 {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.report-card p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.report-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+
+.report-icon i {
+  font-size: 20px;  
+  line-height: 1;    
+  width: 20px;       
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Light backgrounds */
+.bg-primary-light {
+    background: rgba(13, 110, 253, .1);
+}
+
+.bg-info-light {
+    background: rgba(13, 202, 240, .1);
+}
+
+.bg-warning-light {
+    background: rgba(255, 193, 7, .15);
+}
+
+.bg-danger-light {
+    background: rgba(220, 53, 69, .12);
+}
+
+.bg-success-light {
+    background: rgba(25, 135, 84, .12);
+}
+
+#exportsTable td,
+#exportsTable th {
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.report-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.report-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.report-card-link:hover .report-card {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.date-navigator {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  font-weight: 500;
+}
+
+.date-navigator span {
+  min-width: 220px;
+  text-align: center;
+  color: #344054;
+}
+
+.nav-btn {
+  border: none;
+  background: transparent;
+  color: #667085;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  background: #f2f4f7;
+  color: #101828;
+}
+
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+.attendance-table {
+  width: 100%;
+  table-layout: fixed;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 13px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 10px;
+  width: 150px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.status.not-yet {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.dataTables_scrollHead thead th {
+  border-bottom: 0 !important;
+}
+
+.dataTables_scrollBody tbody tr:first-child td {
+  border-top: 0 !important;
+}
+
+.dataTables_scrollHead,
+.dataTables_scrollBody {
+  border: 1px solid #e0e0e0;
+}
+
+.dataTables_scrollHead {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.dataTables_scrollHead table,
+.dataTables_scrollBody table,
+.dataTables_scrollHeadInner {
+  width: 100% !important;
+}
+
+
+
+.attendance-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.date-navigator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-navigator button {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.attendance-table {
+  border-collapse: collapse;
+  min-width: 1400px;
+  width: 100%;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+/* sticky left columns */
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+.col-id { left: 160px; }
+.col-dept { left: 260px; }
+
+.col-emp { width: 160px; text-align: left; }
+.col-id { width: 100px; }
+.col-dept { width: 200px; text-align: left; }
+
+/* day header */
+.day-header {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* status styles */
+.status {
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.status::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 4px;
+}
+
+.status-A { color: #ef4444; }
+.status-A::after { background: #ef4444; }
+
+.status-W { color: #f59e0b; }
+.status-W::after { background: #f59e0b; }
+
+.status-RW { color: #10b981; }
+.status-RW::after { background: #10b981; }
+
+.status-NY { color: #fb923c; }
+.status-NY::after { background: #fb923c; }
+
+.attendance-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+  font-size: 13px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.legend-item i {
+  width: 3px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+/* colors */
+.legend-item.present i { background: #16a34a; }
+.legend-item.weekend i { background: #facc15; }
+.legend-item.absent i { background: #ef4444; }
+.legend-item.leave i { background: #2563eb; }
+.legend-item.regulated i { background: #8b5cf6; }
+.legend-item.remote i { background: #10b981; }
+.legend-item.holiday i { background: #64748b; }
+.legend-item.notyet i { background: #fb923c; }
+
+/* Org Setting */
+
+
+
+/* Tabs Styling */
+.nav-pills .nav-link {
+    color: #64748b;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-check input {
+    display: none;
+}
+
+/* Custom Radio Styling */
+.custom-radio {
+    padding: 1rem;
+    border: 3px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100% !important;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Logic to highlight the box if radio is checked */
+/* Note: Usually requires a tiny bit of JS or specific CSS structure */
+.form-check-input:checked + .form-check-label {
+    font-weight: bold;
+    border-color: var(--theme-secondary)
+}
+
+/* Sub-Tabs Styling (The ones with the underline) */
+.sub-tab {
+    border: none !important;
+    background: transparent !important;
+    color: #64748b !important;
+    border-bottom: 2px solid transparent !important;
+    padding: 0.5rem 1rem !important;
+    margin-right: 1rem;
+    font-size: 0.95rem;
+}
+
+.sub-tab.active {
+    color: var(--theme-secondary) !important;
+    border-bottom: 2px solid var(--theme-secondary) !important;
+    font-weight: 600;
+}
+
+/* Radio Box Highlighting */
+.option-container {
+    transition: all 0.2s ease-in-out;
+}
