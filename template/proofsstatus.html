@@ -768,11 +768,11 @@
                 <div class="container-fluid mt-5">
                     <div class="card p-3">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="mb-0">Early / Late Check-in & Check-out</h4>
+                            <h4 class="mb-0">Proofs status</h4>
 
                             <div class="d-flex gap-2">
                                 <button class="btn btn-outline-secondary">
-                                    Export Excel File<i class="fa fa-upload ms-1"></i>
+                                    Export<i class="fa fa-upload ms-1"></i>
                                 </button>
                             </div>
                         </div>
@@ -812,271 +812,62 @@
                                 </button>
 
                                 <ul class="dropdown-menu p-3" style="min-width:260px; max-height:400px; overflow:auto">
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="1" checked>
+                                    <li><label><input type="checkbox" class="toggle-proof-col" data-col="0" checked>
                                             Employee</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="2" checked>
+                                    <li><label><input type="checkbox" class="toggle-proof-col" data-col="1" checked>
                                             Employee ID</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="3" checked>
-                                            Tags</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="4"> Parent
+                                    <li><label><input type="checkbox" class="toggle-proof-col" data-col="2" checked >
                                             Department</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="5" checked>
-                                            Department</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="6" checked>
-                                            First In</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="7" checked>
-                                            Last Out</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="8" checked>
-                                            Total Hours</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="9" checked>
-                                            Attendance State</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="10"> Full
-                                            Working Hours</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="11"> In
-                                            Shift Hours</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="12">
-                                            Scheduled Break</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="13"> Break
-                                            Start</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="14"> Break
-                                            End</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="15"> Actual
-                                            Break</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="16">
-                                            Permission</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="17"> None
-                                            Complete</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="18">
-                                            Additional Hours</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="19"
-                                                checked> Entry</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="21"
-                                                checked> Exit</label></li>
-                                    <li><label><input type="checkbox" class="toggle-earlylate-col" data-col="23"
-                                                checked> Shift</label></li>
+                                    <li><label><input type="checkbox" class="toggle-proof-col" data-col="3" checked>
+                                            Proofs Type</label></li>
+                                    <li><label><input type="checkbox" class="toggle-proof-col" data-col="4" checked>
+                                            Proofs Method</label></li>
+                                    <li><label><input type="checkbox" class="toggle-proof-col" data-col="5" checked>
+                                            Sent At</label></li>
                                 </ul>
                             </div>
 
-                            <div class="dropdown">
-                                <button id="earlyLateBulkActions" class="btn btn-secondary dropdown-toggle" disabled
-                                    data-bs-toggle="dropdown">
-                                    Actions
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Edit Tag</a></li>
-                                    <li><a class="dropdown-item" href="#">Edit Department</a></li>
-                                    <li><a class="dropdown-item" href="#">Edit Direct Manager</a></li>
-                                </ul>
-                            </div>
                         </div>
 
-
-                        <!-- <div class="table-responsive">
-                            <table id="attendanceTable" class="table attendance-table">
-
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2" class="col-check">
-                                            <input type="checkbox" id="selectAllEarlyLate">
-                                        </th>
-                                        <th rowspan="2" class="col-employee">Employee</th>
-                                        <th rowspan="2" class="col-empid">Employee ID</th>
-                                        <th rowspan="2" class="col-tags">Tags</th>
-                                        <th rowspan="2" class="col-parent-dept">Parent Department</th>
-                                        <th rowspan="2" class="col-dept">Department</th>
-                                        <th rowspan="2" class="col-firstin">First In</th>
-                                        <th rowspan="2" class="col-lastout">Last Out</th>
-                                        <th rowspan="2" class="col-total">Total Hours</th>
-                                        <th rowspan="2" class="col-state">Attendance State</th>
-                                        <th rowspan="2" class="col-full">Full Working Hours</th>
-                                        <th rowspan="2" class="col-inshift">In Shift Hours</th>
-                                        <th rowspan="2" class="col-break">Scheduled Break</th>
-                                        <th rowspan="2" class="col-break-start">Break Start</th>
-                                        <th rowspan="2" class="col-break-end">Break End</th>
-                                        <th rowspan="2" class="col-break-actual">Actual Break</th>
-                                        <th rowspan="2" class="col-permission">Permission</th>
-                                        <th rowspan="2" class="col-nonecomplete">None Complete</th>
-                                        <th rowspan="2" class="col-additional">Additional Hours</th>
-
-                                        <th colspan="2" class="col-entry">Entry</th>
-                                        <th colspan="2" class="col-exit">Exit</th>
-
-                                        <th rowspan="2" class="col-device-in">Check In Device</th>
-                                        <th rowspan="2" class="col-device-out">Check Out Device</th>
-                                        <th rowspan="2" class="col-shift">Shift</th>
-                                    </tr>
-
-                                    <tr>
-                                        <th class="col-entry-early">Early</th>
-                                        <th class="col-entry-late">Late</th>
-                                        <th class="col-exit-early">Early</th>
-                                        <th class="col-exit-late">Late</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td class="col-check"><input type="checkbox" class="row-check-earlylate"></td>
-                                        <td class="col-employee">Mohamad Hatem</td>
-                                        <td class="col-empid">1</td>
-                                        <td class="col-tags">software</td>
-                                        <td class="col-parent-dept">Techsup Business</td>
-                                        <td class="col-dept">Business Development</td>
-                                        <td class="col-firstin">-</td>
-                                        <td class="col-lastout">-</td>
-                                        <td class="col-total">-</td>
-                                        <td class="col-state">Not Yet</td>
-                                        <td class="col-full">23:59</td>
-                                        <td class="col-inshift">00:00</td>
-                                        <td class="col-break">-</td>
-                                        <td class="col-break-start">-</td>
-                                        <td class="col-break-end">-</td>
-                                        <td class="col-break-actual">-</td>
-                                        <td class="col-permission">00:00</td>
-                                        <td class="col-nonecomplete">23:59</td>
-                                        <td class="col-additional">00:00</td>
-                                        <td class="col-entry-early text-success">+00:00</td>
-                                        <td class="col-entry-late text-danger">-00:00</td>
-                                        <td class="col-exit-early text-danger">-00:00</td>
-                                        <td class="col-exit-late text-success">+00:00</td>
-                                        <td class="col-device-in">Mobile App</td>
-                                        <td class="col-device-out">Mobile App</td>
-                                        <td class="col-shift">All Day</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div> -->
-
                         <div class="table-responsive">
-                            <table id="attendanceTable" class="table attendance-table">
-
-                                <thead>
+                            <table id="proofsTable" class="table table-hover align-middle w-100">
+                                <thead class="table-light">
                                     <tr>
-                                        <th rowspan="2" class="col-check">
-                                            <input type="checkbox" id="selectAllEarlyLate">
-                                        </th>
-                                        <th rowspan="2">Employee</th>
-                                        <th rowspan="2">Employee ID</th>
-                                        <th rowspan="2">Tags</th>
-                                        <th rowspan="2">Parent Department</th>
-                                        <th rowspan="2">Department</th>
-                                        <th rowspan="2">First In</th>
-                                        <th rowspan="2">Last Out</th>
-                                        <th rowspan="2">Total Hours</th>
-                                        <th rowspan="2">Attendance State</th>
-                                        <th rowspan="2">Full Working Hours</th>
-                                        <th rowspan="2">In Shift Hours</th>
-                                        <th rowspan="2">Scheduled Break</th>
-                                        <th rowspan="2">Break Start</th>
-                                        <th rowspan="2">Break End</th>
-                                        <th rowspan="2">Actual Break</th>
-                                        <th rowspan="2">Permission</th>
-                                        <th rowspan="2">None Complete</th>
-                                        <th rowspan="2">Additional Hours</th>
-
-                                        <th colspan="2">Entry</th>
-                                        <th colspan="2">Exit</th>
-
-                                        <th rowspan="2">Check In Device</th>
-                                        <th rowspan="2">Check Out Device</th>
-                                        <th rowspan="2">Shift</th>
-                                    </tr>
-
-                                    <tr>
-                                        <th>Early</th>
-                                        <th>Late</th>
-                                        <th>Early</th>
-                                        <th>Late</th>
+                                        <th>Emplyee</th>
+                                        <th>Employee ID</th>
+                                        <th>Department</th>
+                                        <th>Proof Type</th>
+                                        <th>Proof Method</th>
+                                        <th>Sent At</th>
                                     </tr>
                                 </thead>
-
                                 <tbody>
                                     <tr>
-                                        <td><input type="checkbox" class="row-check-earlylate"></td>
-                                        <td>Mohamad Hatem</td>
+                                        <td>Mohammed Hatem</td>
                                         <td>1</td>
-                                        <td>software</td>
-                                        <td>Techsup Business</td>
-                                        <td>Business Development</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>Not Yet</td>
-                                        <td>23:59</td>
-                                        <td>00:00</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>00:00</td>
-                                        <td>23:59</td>
-                                        <td>00:00</td>
-                                        <td class="text-success">+00:00</td>
-                                        <td class="text-danger">-00:00</td>
-                                        <td class="text-danger">-00:00</td>
-                                        <td class="text-success">+00:00</td>
-                                        <td>Mobile App</td>
-                                        <td>Mobile App</td>
-                                        <td>All Day</td>
+                                        <td>Software</td>
+                                        <td>Sent</td>
+                                        <td>Manual</td>
+                                        <td>a minute ago</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="checkbox" class="row-check-earlylate"></td>
-                                        <td>Mohamad Hatem</td>
+                                        <td>Mohammed Hatem</td>
                                         <td>1</td>
-                                        <td>software</td>
-                                        <td>Techsup Business</td>
-                                        <td>Business Development</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>Not Yet</td>
-                                        <td>23:59</td>
-                                        <td>00:00</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>00:00</td>
-                                        <td>23:59</td>
-                                        <td>00:00</td>
-                                        <td class="text-success">+00:00</td>
-                                        <td class="text-danger">-00:00</td>
-                                        <td class="text-danger">-00:00</td>
-                                        <td class="text-success">+00:00</td>
-                                        <td>Mobile App</td>
-                                        <td>Mobile App</td>
-                                        <td>All Day</td>
+                                        <td>Software</td>
+                                        <td>Sent</td>
+                                        <td>Manual</td>
+                                        <td>a minute ago</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="checkbox" class="row-check-earlylate"></td>
-                                        <td>Mohamad Hatem</td>
+                                        <td>Mohammed Hatem</td>
                                         <td>1</td>
-                                        <td>software</td>
-                                        <td>Techsup Business</td>
-                                        <td>Business Development</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>Not Yet</td>
-                                        <td>23:59</td>
-                                        <td>00:00</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>00:00</td>
-                                        <td>23:59</td>
-                                        <td>00:00</td>
-                                        <td class="text-success">+00:00</td>
-                                        <td class="text-danger">-00:00</td>
-                                        <td class="text-danger">-00:00</td>
-                                        <td class="text-success">+00:00</td>
-                                        <td>Mobile App</td>
-                                        <td>Mobile App</td>
-                                        <td>All Day</td>
+                                        <td>Software</td>
+                                        <td>Sent</td>
+                                        <td>Manual</td>
+                                        <td>a minute ago</td>
                                     </tr>
-                                </tbody>
 
+                                </tbody>
                             </table>
                         </div>
 

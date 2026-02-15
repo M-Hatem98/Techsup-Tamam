@@ -614,6 +614,18 @@ initCustomDataTable({
   disabledCols: [4]
 });
 
+initCustomDataTable({
+  table: '#proofsTable',
+  toggleCol: '.toggle-proof-col',
+  disabledCols: [5]
+});
+initCustomDataTable({
+  table: '#appTable',
+  search: '#appSearch',
+  toggleCol: '.toggle-app-col',
+  disabledCols: [9]
+});
+
 
 
 
@@ -626,88 +638,74 @@ initCustomDataTable({
   
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
-  function createDateNavigator({
-    dateEl,
-    prevBtn,
-    nextBtn,
-    mode = 'day',
-    onChange
-  }) {
-    let currentDate = new Date();
+  let currentDate = new Date();
 
-    function formatDate(date) {
-      return mode === 'month'
-        ? date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-        : date.toLocaleDateString('en-US', {
-            weekday: 'long',
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-          });
+  /* =========================
+     Month Navigator
+  ========================== */
+
+  const monthDateEl = document.getElementById('monthDate');
+  const prevMonth = document.getElementById('prevMonth');
+  const nextMonth = document.getElementById('nextMonth');
+
+  if (monthDateEl && prevMonth && nextMonth) {
+
+    function updateMonthUI() {
+      monthDateEl.textContent = currentDate.toLocaleDateString('en-US', {
+        month: 'long',
+        year: 'numeric'
+      });
     }
 
-    function render() {
-      dateEl.textContent = formatDate(currentDate);
-      onChange && onChange(new Date(currentDate));
-    }
-
-    prevBtn.addEventListener('click', () => {
-      mode === 'month'
-        ? currentDate.setMonth(currentDate.getMonth() - 1)
-        : currentDate.setDate(currentDate.getDate() - 1);
-      render();
+    prevMonth.addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      updateMonthUI();
     });
 
-    nextBtn.addEventListener('click', () => {
-      mode === 'month'
-        ? currentDate.setMonth(currentDate.getMonth() + 1)
-        : currentDate.setDate(currentDate.getDate() + 1);
-      render();
+    nextMonth.addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      updateMonthUI();
     });
 
-    render();
+    updateMonthUI();
   }
 
-  /* ==========================
-     🗓 Build Monthly Table
+  /* =========================
+     Day Navigator
   ========================== */
-  function buildAttendanceTable(date) {
-    const year = date.getFullYear();
-    const month = date.getMonth();
 
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const dayDateEl = document.getElementById('dayDate');
+  const prevDay = document.getElementById('prevDay');
+  const nextDay = document.getElementById('nextDay');
 
-    const thead = document.getElementById('monthDaysHeader');
-    const tbody = document.getElementById('monthDaysRow');
+  if (dayDateEl && prevDay && nextDay) {
 
-    thead.innerHTML = '';
-    tbody.innerHTML = '';
-
-    for (let day = 1; day <= daysInMonth; day++) {
-      const th = document.createElement('th');
-      th.textContent = day;
-      thead.appendChild(th);
-
-      const td = document.createElement('td');
-      td.textContent = '-';
-      tbody.appendChild(td);
+    function updateDayUI() {
+      dayDateEl.textContent = currentDate.toLocaleDateString('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+      });
     }
-  }
 
-  /* ==========================
-     📅 Month Navigator
-  ========================== */
-  createDateNavigator({
-    dateEl: document.getElementById('monthDate'),
-    prevBtn: document.getElementById('prevMonth'),
-    nextBtn: document.getElementById('nextMonth'),
-    mode: 'month',
-    onChange: buildAttendanceTable
-  });
+    prevDay.addEventListener('click', () => {
+      currentDate.setDate(currentDate.getDate() - 1);
+      updateDayUI();
+    });
+
+    nextDay.addEventListener('click', () => {
+      currentDate.setDate(currentDate.getDate() + 1);
+      updateDayUI();
+    });
+
+    updateDayUI();
+  }
 
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -800,6 +798,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
 
 document.querySelectorAll('input[name="approvalChain"]').forEach(radio => {
     radio.addEventListener('change', function() {
