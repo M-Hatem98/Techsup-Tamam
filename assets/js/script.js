@@ -833,6 +833,172 @@ document.addEventListener("change", function (e) {
 });
 
 
+
+
+
+
+// pie chart
+var options8 = {
+  chart: {
+    width: 380,
+    type: "pie",
+  },
+  labels: ["😎 : 44", "😊 : 55", "😐 : 13", "☹️ : 43", "😡 : 22"],
+  series: [44, 55, 13, 43, 22],
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200,
+        },
+        legend: {
+          show: false,
+        },
+      },
+    },
+  ],
+  colors: [
+    RihoAdminConfig.primary,
+    RihoAdminConfig.secondary,
+    "#51bb25",
+    "#173878",
+    "#f8d62b",
+  ],
+};
+
+var chart8 = new ApexCharts(document.querySelector("#piechart"), options8);
+
+chart8.render();
+
+
+var options9 = {
+  chart: {
+    width: 380,
+    type: "pie",
+  },
+  labels: ["😎 : 4", "😊 : 8", "😐 : 28", "☹️ : 40", "😡 : 60"],
+  series: [4, 8, 28, 40, 60],
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200,
+        },
+        legend: {
+          show: false,
+        },
+      },
+    },
+  ],
+  colors: [
+    RihoAdminConfig.primary,
+    RihoAdminConfig.secondary,
+    "#51bb25",
+    "#173878",
+    "#f8d62b",
+  ],
+};
+
+var chart9 = new ApexCharts(document.querySelector("#piechartout"), options9);
+
+chart9.render();
+
+
+function createDepartmentChart(config) {
+
+    const selectInstance = new TomSelect(config.select, {
+        plugins: ['remove_button'],
+        placeholder: "Select Departments"
+    });
+
+    const chart = new ApexCharts(document.querySelector(config.chart), {
+        series: [
+            { name: 'Check-in', data: [] },
+            { name: 'Check-out', data: [] }
+        ],
+        chart: {
+            type: 'bar',
+            height: 350,
+            toolbar: { show: false }
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '55%',
+                borderRadius: 6
+            }
+        },
+        colors: ['#1abc9c', '#f39c12'],
+        dataLabels: { enabled: false },
+        legend: { position: 'right' },
+        xaxis: { categories: [] },
+        grid: { borderColor: '#eee' }
+    });
+
+    chart.render();
+
+    function updateChart() {
+        const selected = selectInstance.getValue();
+        const checkIn = [];
+        const checkOut = [];
+        const categories = [];
+
+        selected.forEach(dep => {
+            if (config.data[dep]) {
+                categories.push(config.data[dep].name);
+                checkIn.push(config.data[dep].checkIn);
+                checkOut.push(config.data[dep].checkOut);
+            }
+        });
+
+        chart.updateOptions({
+            xaxis: { categories: categories }
+        });
+
+        chart.updateSeries([
+            { name: 'Check-in', data: checkIn },
+            { name: 'Check-out', data: checkOut }
+        ]);
+    }
+
+    selectInstance.on('change', updateChart);
+
+    updateChart(); // initial load
+}
+
+// Example Data (Mock Backend)
+
+const departmentData = {
+    dev: { name: "Software Development Team", checkIn: 4, checkOut: 3.5 },
+    frontend: { name: "Frontend", checkIn: 3, checkOut: 4 },
+    finance: { name: "Finance", checkIn: 2, checkOut: 2.5 },
+    hr: { name: "HR", checkIn: 1.5, checkOut: 2 },
+    marketing: { name: "Marketing", checkIn: 3.2, checkOut: 3.8 }
+};
+
+// Initialize
+createDepartmentChart({
+    select: "#departmentSelect",
+    chart: "#chart",
+    data: departmentData
+});
+
+
+const shiftData = {
+  allDay: { name: "All Day", checkIn: 4, checkOut: 7.5 },
+  default: { name: "Default", checkIn: 6, checkOut: 4.5 },
+  test: { name: "Test", checkIn: 6.5, checkOut: 5.5 }
+};
+
+createDepartmentChart({
+  select: "#shiftSelect",
+  chart: "#shiftChart",
+  data: shiftData
+});
+
+
+
 })(jQuery);
 
 

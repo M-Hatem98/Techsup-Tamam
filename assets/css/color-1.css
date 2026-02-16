@@ -458,3 +458,12 @@
 .option-container {
     transition: all 0.2s ease-in-out;
 }
+
+
+ .card {
+            border-radius: 12px;
+        }
+
+        .ts-control {
+            border-radius: 10px !important;
+        }
