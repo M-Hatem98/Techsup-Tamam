@@ -593,6 +593,8 @@ $('button[data-bs-toggle="pill"]').on('shown.bs.tab', function () {
     disabledCols: [0]
   });
   
+
+  
   initCustomDataTable({
   table: '#webhooksTable',
   search: '#webhooksSearch',
@@ -625,7 +627,22 @@ initCustomDataTable({
   toggleCol: '.toggle-app-col',
   disabledCols: [9]
 });
+initCustomDataTable({
+  table: '#requestsTable',
+  toggleCol: '.toggle-requests-col',
+  disabledCols: [13]
+});
+initCustomDataTable({
+  table: '#leavesTable',
+  toggleCol: '.toggle-leaves-col',
+  disabledCols: [11]
+});
 
+initCustomDataTable({
+  table: '#statementsTable',
+  toggleCol: '.toggle-statements-col',
+  disabledCols: [0, 13]
+});
 
 
 
@@ -859,11 +876,11 @@ var options8 = {
     },
   ],
   colors: [
-    RihoAdminConfig.primary,
-    RihoAdminConfig.secondary,
-    "#51bb25",
-    "#173878",
-    "#f8d62b",
+    "#32D29B",
+    "#3881C4",
+    "#8E30FF",
+    "#F6A118",
+    "#F77774",
   ],
 };
 
@@ -893,11 +910,11 @@ var options9 = {
     },
   ],
   colors: [
-    RihoAdminConfig.primary,
-    RihoAdminConfig.secondary,
-    "#51bb25",
-    "#173878",
-    "#f8d62b",
+    "#32D29B",
+    "#3881C4",
+    "#8E30FF",
+    "#F6A118",
+    "#F77774",
   ],
 };
 
