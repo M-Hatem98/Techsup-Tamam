@@ -718,7 +718,8 @@
     </button>
     <ul class="dropdown-menu p-3">
       <li><label><input type="checkbox" class="toggle-shifts-col" data-col="0" checked> Name</label></li>
-      <li><label><input type="checkbox" class="toggle-shifts-col" data-col="1" checked> Default</label></li>
+      <li><label><input type="checkbox" class="toggle-shifts-col" data-col="1" checked> Shift</label></li>
+      <li><label><input type="checkbox" class="toggle-shifts-col" data-col="2" checked> Company</label></li>
     </ul>
   </div>
 
@@ -728,14 +729,18 @@
   <thead class="table-light">
     <tr>
       <th>Name</th>
-      <th>Default</th>
+      <th>Shift</th>
+      <th>Work Place</th>
+      <th>Work Site</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Mohammed Hatem</td>
-      <td><div class="badge badge-light-primary">default shift</div></td>
+      <td>Shift 1</td>
+      <td></td>
+      <td>المستشفى</td>
+      <td>Point 1</td>
       <td>
         <div class="dropdown">
           <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">
@@ -749,8 +754,10 @@
       </td>
     </tr>
     <tr>
-      <td>Mohammed Hatem</td>
-      <td><div class="badge badge-light-danger">new shift</div></td>
+      <td>Shift 2</td>
+      <td></td>
+      <td>المستشفى</td>
+      <td>Point 2</td>
       <td>
         <div class="dropdown">
           <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">
@@ -764,8 +771,10 @@
       </td>
     </tr>
     <tr>
-      <td>Mohammed Hatem</td>
+      <td>Default Shift</td>
       <td><div class="badge badge-light-primary">default shift</div></td>
+      <td>-</td>
+      <td>-</td>
       <td>
         <div class="dropdown">
           <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">

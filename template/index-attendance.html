@@ -695,8 +695,8 @@
               <div class="col-6">
                 <h4>Techsup Tamam Attendance</h4>
               </div>
-              <div class="col-6">
-                <ol class="breadcrumb">
+              <div class="col-6 d-flex justify-content-end">
+                <!-- <ol class="breadcrumb">
                   <li class="breadcrumb-item">
                     <a href="index.html">
                       <svg class="stroke-icon">
@@ -707,7 +707,112 @@
                   <li class="breadcrumb-item active">
                     <a href="index.html">Index</a>
                   </li>
-                </ol>
+                </ol> -->
+                <button class="btn btn-primary dropdown-toggle"
+                        id="filterToggleBtn"        
+                        data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside">
+                  <i class="fa fa-sliders"></i> Filters
+                </button>
+<!-- Dropdown -->
+<div id="filterDropdown" class="filter-dropdown">
+
+  <div class="filter-header">
+    <span>Filters</span>
+    <button class="btn p-2" id="closeFilter"><i class="fa fa-close"></i></button>
+  </div>
+
+  <!-- Locations -->
+  <div class="filter-section">
+    <div class="filter-title" data-target="locationsBody">
+      Locations
+      <span>▾</span>
+    </div>
+
+    <div class="filter-body" id="locationsBody">
+      <input type="text" placeholder="Search..." class="filter-search">
+
+      <label>
+        <input type="checkbox" id="location_1" name="locations" value="techsup">
+        Techsup Business
+      </label>
+
+      <label>
+        <input type="checkbox" id="location_3" name="locations" value="frontend">
+        Frontend Test
+      </label>
+    </div>
+  </div>
+
+  <!-- Shifts -->
+  <div class="filter-section">
+    <div class="filter-title" data-target="shiftsBody">
+      Shifts
+      <span>▾</span>
+    </div>
+
+    <div class="filter-body" id="shiftsBody">
+      <input type="text" placeholder="Search..." class="filter-search">
+
+      <label>
+        <input type="checkbox" id="shift_1" name="shifts" value="morning">
+        Morning
+      </label>
+
+      <label>
+        <input type="checkbox" id="shift_2" name="shifts" value="evening">
+        Evening
+      </label>
+    </div>
+  </div>
+
+  <!-- Departments -->
+  <div class="filter-section">
+    <div class="filter-title" data-target="departmentsBody">
+      Departments
+      <span>▾</span>
+    </div>
+
+    <div class="filter-body" id="departmentsBody">
+      <input type="text" placeholder="Search..." class="filter-search">
+
+      <label>
+        <input type="checkbox" id="dept_1" name="departments" value="hr">
+        HR
+      </label>
+
+      <label>
+        <input type="checkbox" id="dept_2" name="departments" value="it">
+        IT
+      </label>
+    </div>
+  </div>
+
+  <!-- Employees -->
+  <div class="filter-section">
+    <div class="filter-title" data-target="employeesBody">
+      Employees
+      <span>▾</span>
+    </div>
+
+    <div class="filter-body" id="employeesBody">
+      <input type="text" placeholder="Search..." class="filter-search">
+
+      <label>
+        <input type="checkbox" id="emp_1" name="employees" value="101">
+        Mohammed Hatem
+      </label>
+
+      <label>
+        <input type="checkbox" id="emp_2" name="employees" value="102">
+        Islam Salah
+      </label>
+    </div>
+  </div>
+
+  <button id="clearFilters">Clear all</button>
+
+</div>
               </div>
             </div>
           </div>

@@ -1015,6 +1015,61 @@ createDepartmentChart({
 });
 
 
+// Dropdown filters Btn
+
+function initDropdownFilters() {
+
+  const dropdown = document.getElementById("filterDropdown");
+
+  // Toggle dropdown
+  document.getElementById("filterToggleBtn")
+    .addEventListener("click", () => {
+      dropdown.style.display =
+        dropdown.style.display === "block" ? "none" : "block";
+    });
+
+  document.getElementById("closeFilter")
+    .addEventListener("click", () => {
+      dropdown.style.display = "none";
+    });
+
+  // Accordion toggle
+  document.querySelectorAll(".filter-title")
+    .forEach(title => {
+      title.addEventListener("click", () => {
+        const body = document.getElementById(title.dataset.target);
+        body.style.display =
+          body.style.display === "block" ? "none" : "block";
+      });
+    });
+
+  // Search inside each section
+  document.querySelectorAll(".filter-search")
+    .forEach(input => {
+      input.addEventListener("keyup", function () {
+        const value = this.value.toLowerCase();
+        const labels = this.parentElement.querySelectorAll("label");
+
+        labels.forEach(label => {
+          label.style.display =
+            label.textContent.toLowerCase().includes(value)
+              ? "block"
+              : "none";
+        });
+      });
+    });
+
+  // Clear all
+  document.getElementById("clearFilters")
+    .addEventListener("click", () => {
+      document.querySelectorAll("#filterDropdown input[type='checkbox']")
+        .forEach(cb => cb.checked = false);
+    });
+}
+
+initDropdownFilters();
+
+
 
 })(jQuery);
 
