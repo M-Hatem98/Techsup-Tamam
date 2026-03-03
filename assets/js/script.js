@@ -537,6 +537,13 @@ initCustomDataTable({
 });
 
 initCustomDataTable({
+  table: '#branchesTable',
+  search: '#branchesTableSearch',
+  toggleCol: '.toggle-branches-col',
+  disabledCols: [0, 3]
+});
+
+initCustomDataTable({
   table: '#departmentsTableStart',
   search: '#departmentsTableSearchStart',
   selectAll: '#selectAllDepartmentsStart',

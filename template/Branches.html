@@ -42,6 +42,8 @@
   <!-- Plugins css Ends-->
   <!-- Bootstrap css-->
   <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css" />
+  <!-- Data table css -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
   <!-- App css-->
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
   <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen" />
@@ -624,11 +626,6 @@
                     <li><a href="hide-on-scroll.html">Hide Nav Scroll</a></li> -->
                 </ul>
               </li>
-              <!-- <li class="sidebar-main-title">
-                  <div>
-                    <h6 class="lan-8">Applications</h6>
-                  </div>
-                </li> -->
               <li class="sidebar-list">
                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa-solid fa-tag fill-icon"></i>
@@ -698,403 +695,118 @@
       </div>
       <!-- Page Sidebar Ends-->
       <div class="page-body">
-        <div class="container-fluid">
-          <!-- Greeting -->
-          <div class="row mb-4">
-            <div class="col-12">
-              <h5 id="greetingText" class="text-muted">Good Morning,</h5>
-              <h3 class="fw-bold">Mohammed Hatem</h3>
+      
+        <!-- Container-fluid starts-->
+        <div class="container-fluid mt-5">
+            <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+  <h4 class="mb-0">Branches</h4>
+
+  <div class="d-flex gap-2">
+    <a href="addBranch.html" class="btn btn-outline-secondary">
+      <i class="fa fa-add ms-1"></i> New Branches
+    </a>
+  </div>
+</div>
+
+<div class="d-flex flex-wrap gap-2 mb-3 align-items-center">
+  <input
+    type="text"
+    id="branchesTableSearch"
+    class="form-control w-50"
+    placeholder="Search Branches" />
+
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+      Display
+    </button>
+    <ul class="dropdown-menu p-3">
+      <li><label><input type="checkbox" class="toggle-branches-col" data-col="1" checked> Branches Name</label></li>
+      <li><label><input type="checkbox" class="toggle-branches-col" data-col="2" checked> Branches ID</label></li>
+      <li><label><input type="checkbox" class="toggle-branches-col" data-col="3" checked> Tag</label></li>
+    </ul>
+  </div>
+
+</div>
+<div class="table-responsive">
+  <table id="branchesTable" class="table table-hover align-middle w-100">
+  <thead class="table-light">
+    <tr>
+      <th>Branche Name</th>
+      <th>Branche ID</th>
+      <th>Tag</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cairo	</td>
+      <td>001</td>
+      <td><div class="badge badge-light-success">CA</div></td>
+      <td class="text-end">
+        <div class="dropdown">
+          <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">
+            <i class="fa fa-ellipsis-h"ss></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="fa fa-eye me-2"></i>Show</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-edit me-2"></i>Edit</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Cairo	</td>
+      <td>001</td>
+      <td><div class="badge badge-light-success">CA</div></td>
+      <td class="text-end">
+        <div class="dropdown">
+          <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">
+            <i class="fa fa-ellipsis-h"ss></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="fa fa-eye me-2"></i>Show</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-edit me-2"></i>Edit</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Cairo	</td>
+      <td>001</td>
+      <td><div class="badge badge-light-success">CA</div></td>
+      <td class="text-end">
+        <div class="dropdown">
+          <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">
+            <i class="fa fa-ellipsis-h"ss></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="fa fa-eye me-2"></i>Show</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-edit me-2"></i>Edit</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+</div>
             </div>
-          </div>
 
-          <!-- Top Cards -->
-          <div class="row g-4 mb-4">
-            <!-- Total Employees -->
-            <div class="col-xl-6 col-md-6">
-              <div class="card o-hidden small-widget">
-                <div class="card-body total-Progress border-b-primary border-2">
-                  <!-- Title -->
-                  <span class="f-light f-w-500 f-20 d-flex align-items-center gap-2">
-                    <i class="fa fa-user font-primary"></i>
-                    Total Employees
-                  </span>
-
-                  <!-- Content -->
-                  <div class="project-details">
-                    <div class="project-counter">
-                      <h2 class="f-w-600 font-primary">7</h2>
-                    </div>
-
-                    <div class="product-sub bg-primary-light">
-                      <i class="fa fa-arrow-right fs-3 font-primary"></i>
-                    </div>
-                  </div>
-
-                  <!-- Bubbles (keep as-is for animation) -->
-                  <ul class="bubbles">
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Total Departments -->
-            <div class="col-xl-6 col-md-6">
-              <div class="card o-hidden small-widget">
-                <div class="card-body total-Progress border-b-primary border-2">
-                  <!-- Title -->
-                  <span class="f-light f-w-500 f-20 d-flex align-items-center gap-2">
-                    <i class="fa fa-briefcase font-primary"></i>
-                    Total Departments
-                  </span>
-
-                  <!-- Content -->
-                  <div class="project-details">
-                    <div class="project-counter">
-                      <h2 class="f-w-600 font-primary">8</h2>
-                    </div>
-
-                    <div class="product-sub bg-primary-light">
-                      <i class="fa fa-arrow-right fs-3 font-primary"></i>
-                    </div>
-                  </div>
-
-                  <!-- Bubbles animation -->
-                  <ul class="bubbles">
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                    <li class="bubble"></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recently Added Employees -->
-          <div class="row">
-            <div class="col-12">
-              <h5 class="fw-bold mb-3">Recently Added employees</h5>
-
-              <div class="card">
-                <div class="card-body p-0">
-                  <div class="table-responsive">
-                    <table class="table table-hover mb-0">
-                      <thead class="table-light">
-                        <tr>
-                          <th>Name</th>
-                          <th>Employee ID</th>
-                          <th>Email</th>
-                          <th>Department</th>
-                          <th>Position</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Mohamad Karim Younes</td>
-                          <td>1</td>
-                          <td>mkyounes@techsup.co</td>
-                          <td>-</td>
-                          <td>Business Development Manager</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Tarik Algain</td>
-                          <td>2</td>
-                          <td>talgain@techsup.co</td>
-                          <td>-</td>
-                          <td>Chairman</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Qossai Algain</td>
-                          <td>3</td>
-                          <td>qtalgain@techsup.co</td>
-                          <td>-</td>
-                          <td>Business Development Manager</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Tarik Saleh</td>
-                          <td>4</td>
-                          <td>tareks@techsup.co</td>
-                          <td>-</td>
-                          <td>Software Development Manager</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>اسلام صلاح</td>
-                          <td>150</td>
-                          <td>islamm1995@gmail.com</td>
-                          <td>-</td>
-                          <td>مبرمج</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Mohammed Hatem</td>
-                          <td>73</td>
-                          <td>moh.hat226@gmail.com</td>
-                          <td>-</td>
-                          <td>Frontend</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Norman Newman</td>
-                          <td>962</td>
-                          <td>gegonuq@mailinator.com</td>
-                          <td>-</td>
-                          <td>Aliquid voluptate op</td>
-                          <td class="text-end">
-                            <div class="dropdown">
-                              <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-ellipsis-h fs-5"></i>
-                              </button>
-
-                              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-eye text-primary"></i>
-                                    Show
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                    <i class="fa fa-edit text-warning"></i>
-                                    Edit
-                                  </a>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                  <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
-                                    <i class="fa fa-user-slash"></i>
-                                    Deactivate
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 footer-copyright text-center">
+            <p class="mb-0">Copyright 2026 © Techsup Tamam</p>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12 footer-copyright text-center">
-              <p class="mb-0">Copyright 2026 © Techsup Tamam</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+    </footer>
     </div>
   </div>
 
@@ -1133,31 +845,15 @@
   <script src="../assets/js/dashboard/dashboard_2.js"></script>
   <script src="../assets/js/animation/wow/wow.min.js"></script>
   <!-- Plugins JS Ends-->
+   <!-- DataTables -->
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
   <!-- Theme js-->
   <script src="../assets/js/script.js"></script>
   <!--script(src='../assets/js/theme-customizer/customizer.js')-->
   <script>
     new WOW().init();
-  </script>
-  <script>
-      function setGreeting() {
-    const hour = new Date().getHours();
-    let greeting = 'Hello';
-
-    if (hour >= 5 && hour < 12) {
-      greeting = 'Good Morning';
-    } else if (hour >= 12 && hour < 17) {
-      greeting = 'Good Afternoon';
-    } else if (hour >= 17 && hour < 21) {
-      greeting = 'Good Evening';
-    } else {
-      greeting = 'Good Night';
-    }
-
-    document.getElementById('greetingText').innerText = greeting + ',';
-  }
-
-  setGreeting();
   </script>
 </body>
 
