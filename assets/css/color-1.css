@@ -629,3 +629,17 @@
   font-size: 13px;
   margin-top: 10px;
 }
+
+.addLocation .card-box {
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+.addLocation #map {
+    height:400px;
+    width:100%;
+    border-radius:10px;
+    margin-top:20px;
+}
+.addLocation .hidden { display:none; }
