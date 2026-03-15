@@ -51,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
 </head>
 
-<body id="theme" class="theme">
+<body id="Geospatial">
     <!-- loader starts-->
     <div class="loader-wrapper">
         <div class="loader">
@@ -384,8 +384,8 @@
                                                                         </div>
                                                                         <div>
                                                                             <span class="f-w-500 f-light f-12">Wishing
-                                                                                You a Happy Birthday Dear..
-                                                                                🥳🎊</span>
+                                                                                You a Happy Birthday
+                                                                                Dear..🥳🎊</span>
                                                                         </div>
                                                                     </div>
                                                                     <span class="f-light f-w-500 f-12">52 min</span>
@@ -614,9 +614,8 @@
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper" data-layout="stroke-svg">
                 <div class="logo-wrapper">
-                    <a href="index.html">
-                        <img id="site-logo" class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" />
-                    </a>
+                    <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png"
+                            alt="Techsup Logo" /></a>
                     <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
                     <div class="toggle-sidebar">
                         <i class="fa-solid fa-bars font-primary"></i>
@@ -776,226 +775,26 @@
             <div class="page-body">
                 <!-- Container-fluid starts-->
                 <div class="container-fluid mt-5">
-                    <div class="card p-4">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">
-                                Organization identity
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">
-                                Integrations
-                            </button>
-                        </li>
-                    </ul>
-                    </div>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                            aria-labelledby="pills-home-tab">
-                            <div class="card shadow-sm p-4">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0">Geospatial Attendance Report</h4>
 
-                                <!-- Title -->
-                                <h4 class="fw-bold mb-3">Organization identity</h4>
-                                <hr>
-
-                                <!-- Organization Name -->
-                                <div class="row mb-4 align-items-center">
-                                    <div class="col-md-4">
-                                        <label class="fw-semibold">Organization name</label>
-                                        <p class="text-muted small mb-0">
-                                            Enter the official name of the organization
-                                        </p>
-                                    </div>
-
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" value="Tamam">
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <!-- Logo Section -->
-                                <div class="row mb-4">
-
-                                    <!-- Description -->
-                                    <div class="col-md-4">
-                                        <label class="fw-semibold">Logo</label>
-
-                                        <p class="text-muted small">
-                                            Attach your organization's logo in two versions
-                                            The official logo and white version for display on the app
-                                        </p>
-
-                                        <p class="text-muted small">
-                                            File size limit : 2MB <br>
-                                            Supported format : PNG , JPG
-                                        </p>
-                                    </div>
-
-                                    <!-- Upload Logos -->
-                                    <div class="col-md-8">
-
-                                        <div class="row text-center">
-
-                                            <!-- Official Logo -->
-                                            <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
-
-                                                <label class="fw-semibold mb-2">Official logo</label>
-
-                                                <div class="border rounded p-3 bg-light mb-3 w-50">
-                                                    <img id="officialPreview" src="../assets/images/logo/logo.png"
-                                                        style="height:110px; object-fit:contain;">
-                                                </div>
-                                                <input hidden type="file" id="officialLogo">
-                                                <button type="button" class="btn btn-outline-primary btn-sm mb-2"
-                                                    onclick="document.getElementById('officialLogo').click()">
-
-                                                    <i class="fa fa-upload me-1"></i>
-                                                    Upload official logo
-                                                </button>
-
-
-                                                <button class="btn btn-outline-danger btn-sm"
-                                                    onclick="removeLogo('officialPreview','officialLogo')">
-                                                    <i class="fas fa-trash"></i> Delete
-                                                </button>
-
-                                            </div>
-
-
-                                            <!-- White Logo -->
-                                            <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
-
-                                                <label class="fw-semibold mb-2">White logo</label>
-
-                                                <div class="border rounded p-3 bg-dark mb-3 w-50">
-                                                    <img id="whitePreview" src="../assets/images/logo/logo_dark.png"
-                                                        style="height:110px; object-fit:contain;">
-                                                </div>
-                                                <input hidden type="file" id="whiteLogo">
-                                                <button type="button" class="btn btn-outline-primary btn-sm mb-2"
-                                                    onclick="document.getElementById('whiteLogo').click()">
-
-                                                    <i class="fa fa-upload me-1"></i>
-                                                    Upload white logo
-                                                </button>
-
-
-                                                <button class="btn btn-outline-danger btn-sm"
-                                                    onclick="removeLogo('whitePreview','whiteLogo')">
-                                                    <i class="fa fa-trash"></i> Delete
-                                                </button>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <hr>
-
-                                <!-- Organization Color -->
-                                <div class="row mb-4 align-items-center">
-
-                                    <div class="col-md-4">
-                                        <label class="fw-semibold">Organization color</label>
-
-                                        <p class="text-muted small">
-                                            Select the base color for the organization
-                                            and it will be reflected on the interface
-                                        </p>
-                                    </div>
-
-                                    <div class="col-md-8">
-
-                                        <input type="color" class="form-control form-control-color" value="#135829">
-
-                                    </div>
-
-                                </div>
-
-                                <hr>
-
-                                <!-- Save Button -->
-                                <button class="btn btn-primary px-4">
-                                    Saving changes
-                                </button>
-
+                            <div class="date-navigator">
+                                <button class="nav-btn" id="prevDay"><i class="fa fa-chevron-left"></i></button>
+                                <span id="dayDate"></span>
+                                <button class="nav-btn" id="nextDay"><i class="fa fa-chevron-right"></i></button>
                             </div>
+
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                            aria-labelledby="pills-profile-tab">
-                            <div class="card p-3">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-  <h4 class="mb-0">Tokens</h4>
 
-  <div class="d-flex gap-2">
-    <a href="#" class="btn btn-outline-secondary">
-      <i class="fa fa-add ms-1"></i> New Tokens
-    </a>
-  </div>
-</div>
-
-<div class="d-flex flex-wrap gap-2 mb-3 align-items-center">
-  <input
-    type="text"
-    id="tokenTableSearch"
-    class="form-control w-50"
-    placeholder="Search Tokens" />
-
-  <div class="dropdown">
-    <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-      Display
-    </button>
-    <ul class="dropdown-menu p-3">
-      <li><label><input type="checkbox" class="toggle-tokens-col" data-col="0" checked> Name</label></li>
-      <li><label><input type="checkbox" class="toggle-tokens-col" data-col="1" checked> Last used At</label></li>
-    </ul>
-  </div>
-
-</div>
-<div class="table-responsive">
-  <table id="tokensTable" class="table table-hover align-middle w-100">
-  <thead class="table-light">
-    <tr>
-      <th>Name</th>
-      <th>Last used At</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Test</td>
-      <td>-</td>
-      
-      <td>
-        <div class="dropdown">
-          <button  class="btn btn-link text-muted" data-bs-toggle="dropdown">
-            <i class="fa fa-ellipsis-h"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end">          
-            <li><a class="dropdown-item text-danger" href="#"><i class="fa fa-trash me-2"></i>Delete</a></li>
-          </ul>
-        </div>
-      </td>
-    </tr>
+                        <div class="mt-4 row">
+    <div class="mb-3 col-md-6">
+        <input id="pac-input" class="form-control shadow-sm" type="text" placeholder="Search ...">
+    </div>
     
-
-  </tbody>
-</table>
-
+    <div class="col-md-12 m-4" id="map" style="height: 500px; width: 100%; border-radius: 8px; border: 1px solid #ddd;"></div>
 </div>
-            </div>
-                        </div>
                     </div>
-                </div>
 
                 <!-- Container-fluid Ends-->
             </div>
@@ -1010,6 +809,7 @@
                 </div>
             </div>
         </footer>
+    </div>
     </div>
 
     <!-- latest jquery-->
@@ -1030,6 +830,8 @@
     <script src="../assets/js/slick/slick.min.js"></script>
     <script src="../assets/js/slick/slick.js"></script>
     <script src="../assets/js/header-slick.js"></script>
+    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
     <!-- Range Slider js-->
     <script src="../assets/js/range-slider/rSlider.min.js"></script>
     <script src="../assets/js/rangeslider/rangeslider.js"></script>
@@ -1040,20 +842,21 @@
     <script src="../assets/js/counter/counter-custom.js"></script>
     <script src="../assets/js/custom-card/custom-card.js"></script>
     <!-- calendar js-->
-
-    <!-- <script src="../assets/js/dashboard/dashboard_2.js"></script> -->
     <script src="../assets/js/animation/wow/wow.min.js"></script>
     <!-- Plugins JS Ends-->
     <!-- DataTables -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YfyABJLtHtGeSPWP-OroNbQ7yBvMWnw&libraries=marker"></script>
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
     <!--script(src='../assets/js/theme-customizer/customizer.js')-->
     <script>
         new WOW().init();
     </script>
+
+
 </body>
 
 </html>

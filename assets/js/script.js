@@ -574,6 +574,13 @@ initCustomDataTable({
 });
 
 initCustomDataTable({
+  table: '#tokensTable',
+  search: '#tokensTableSearch',
+  toggleCol: '.toggle-tokens-col',
+  disabledCols: [2]
+});
+
+initCustomDataTable({
   table: '#holidaysTable',
   search: '#holidaysTableSearch',
   toggleCol: '.toggle-holidays-col',
@@ -666,9 +673,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentDate = new Date();
 
-  /* =========================
-     Month Navigator
-  ========================== */
 
   const monthDateEl = document.getElementById('monthDate');
   const prevMonth = document.getElementById('prevMonth');
@@ -695,10 +699,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateMonthUI();
   }
-
-  /* =========================
-     Day Navigator
-  ========================== */
 
   const dayDateEl = document.getElementById('dayDate');
   const prevDay = document.getElementById('prevDay');
@@ -731,7 +731,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+let present = document.getElementById('present');
+if (present) {
 document.addEventListener('DOMContentLoaded', () => {
 
   const employees = [
@@ -821,7 +822,9 @@ document.addEventListener('DOMContentLoaded', () => {
     onChange: buildAttendanceTable
   });
 
-});
+});  
+}
+
 
 
 
@@ -860,222 +863,333 @@ document.addEventListener("change", function (e) {
 
 
 
-
-// pie chart
-var options8 = {
-  chart: {
-    width: 380,
-    type: "pie",
-  },
-  labels: ["😎 : 44", "😊 : 55", "😐 : 13", "☹️ : 43", "😡 : 22"],
-  series: [44, 55, 13, 43, 22],
-  responsive: [
-    {
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200,
-        },
-        legend: {
-          show: false,
+const mode = document.getElementById('mode');
+if(mode) {
+  // pie chart
+  var options8 = {
+    chart: {
+      width: 380,
+      type: "pie",
+    },
+    labels: ["😎 : 44", "😊 : 55", "😐 : 13", "☹️ : 43", "😡 : 22"],
+    series: [44, 55, 13, 43, 22],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            show: false,
+          },
         },
       },
+    ],
+    colors: [
+      "#32D29B",
+      "#3881C4",
+      "#8E30FF",
+      "#F6A118",
+      "#F77774",
+    ],
+  };
+  
+  var chart8 = new ApexCharts(document.querySelector("#piechart"), options8);
+  
+  chart8.render();
+  
+  
+  var options9 = {
+    chart: {
+      width: 380,
+      type: "pie",
     },
-  ],
-  colors: [
-    "#32D29B",
-    "#3881C4",
-    "#8E30FF",
-    "#F6A118",
-    "#F77774",
-  ],
-};
-
-var chart8 = new ApexCharts(document.querySelector("#piechart"), options8);
-
-chart8.render();
-
-
-var options9 = {
-  chart: {
-    width: 380,
-    type: "pie",
-  },
-  labels: ["😎 : 4", "😊 : 8", "😐 : 28", "☹️ : 40", "😡 : 60"],
-  series: [4, 8, 28, 40, 60],
-  responsive: [
-    {
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200,
-        },
-        legend: {
-          show: false,
+    labels: ["😎 : 4", "😊 : 8", "😐 : 28", "☹️ : 40", "😡 : 60"],
+    series: [4, 8, 28, 40, 60],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            show: false,
+          },
         },
       },
-    },
-  ],
-  colors: [
-    "#32D29B",
-    "#3881C4",
-    "#8E30FF",
-    "#F6A118",
-    "#F77774",
-  ],
-};
+    ],
+    colors: [
+      "#32D29B",
+      "#3881C4",
+      "#8E30FF",
+      "#F6A118",
+      "#F77774",
+    ],
+  };
+  
+  var chart9 = new ApexCharts(document.querySelector("#piechartout"), options9);
+  
+  chart9.render();
 
-var chart9 = new ApexCharts(document.querySelector("#piechartout"), options9);
-
-chart9.render();
-
-
-function createDepartmentChart(config) {
-
-    const selectInstance = new TomSelect(config.select, {
-        plugins: ['remove_button'],
-        placeholder: "Select Departments"
-    });
-
-    const chart = new ApexCharts(document.querySelector(config.chart), {
-        series: [
-            { name: 'Check-in', data: [] },
-            { name: 'Check-out', data: [] }
-        ],
-        chart: {
-            type: 'bar',
-            height: 350,
-            toolbar: { show: false }
-        },
-        plotOptions: {
-            bar: {
-                columnWidth: '55%',
-                borderRadius: 6
-            }
-        },
-        colors: ['#1abc9c', '#f39c12'],
-        dataLabels: { enabled: false },
-        legend: { position: 'right' },
-        xaxis: { categories: [] },
-        grid: { borderColor: '#eee' }
-    });
-
-    chart.render();
-
-    function updateChart() {
-        const selected = selectInstance.getValue();
-        const checkIn = [];
-        const checkOut = [];
-        const categories = [];
-
-        selected.forEach(dep => {
-            if (config.data[dep]) {
-                categories.push(config.data[dep].name);
-                checkIn.push(config.data[dep].checkIn);
-                checkOut.push(config.data[dep].checkOut);
-            }
-        });
-
-        chart.updateOptions({
-            xaxis: { categories: categories }
-        });
-
-        chart.updateSeries([
-            { name: 'Check-in', data: checkIn },
-            { name: 'Check-out', data: checkOut }
-        ]);
-    }
-
-    selectInstance.on('change', updateChart);
-
-    updateChart(); // initial load
+  function createDepartmentChart(config) {
+  
+      const selectInstance = new TomSelect(config.select, {
+          plugins: ['remove_button'],
+          placeholder: "Select Departments"
+      });
+  
+      const chart = new ApexCharts(document.querySelector(config.chart), {
+          series: [
+              { name: 'Check-in', data: [] },
+              { name: 'Check-out', data: [] }
+          ],
+          chart: {
+              type: 'bar',
+              height: 350,
+              toolbar: { show: false }
+          },
+          plotOptions: {
+              bar: {
+                  columnWidth: '55%',
+                  borderRadius: 6
+              }
+          },
+          colors: ['#1abc9c', '#f39c12'],
+          dataLabels: { enabled: false },
+          legend: { position: 'right' },
+          xaxis: { categories: [] },
+          grid: { borderColor: '#eee' }
+      });
+  
+      chart.render();
+  
+      function updateChart() {
+          const selected = selectInstance.getValue();
+          const checkIn = [];
+          const checkOut = [];
+          const categories = [];
+  
+          selected.forEach(dep => {
+              if (config.data[dep]) {
+                  categories.push(config.data[dep].name);
+                  checkIn.push(config.data[dep].checkIn);
+                  checkOut.push(config.data[dep].checkOut);
+              }
+          });
+  
+          chart.updateOptions({
+              xaxis: { categories: categories }
+          });
+  
+          chart.updateSeries([
+              { name: 'Check-in', data: checkIn },
+              { name: 'Check-out', data: checkOut }
+          ]);
+      }
+  
+      selectInstance.on('change', updateChart);
+  
+      updateChart(); // initial load
+  }
+  
+  
+  
+  // Example Data (Mock Backend)
+  
+  const departmentData = {
+      dev: { name: "Software Development Team", checkIn: 4, checkOut: 3.5 },
+      frontend: { name: "Frontend", checkIn: 3, checkOut: 4 },
+      finance: { name: "Finance", checkIn: 2, checkOut: 2.5 },
+      hr: { name: "HR", checkIn: 1.5, checkOut: 2 },
+      marketing: { name: "Marketing", checkIn: 3.2, checkOut: 3.8 }
+  };
+  
+  // Initialize
+  createDepartmentChart({
+      select: "#departmentSelect",
+      chart: "#chart",
+      data: departmentData
+  });
+  const shiftData = {
+    allDay: { name: "All Day", checkIn: 4, checkOut: 7.5 },
+    default: { name: "Default", checkIn: 6, checkOut: 4.5 },
+    test: { name: "Test", checkIn: 6.5, checkOut: 5.5 }
+  };
+  
+  createDepartmentChart({
+    select: "#shiftSelect",
+    chart: "#shiftChart",
+    data: shiftData
+  });
 }
 
-// Example Data (Mock Backend)
 
-const departmentData = {
-    dev: { name: "Software Development Team", checkIn: 4, checkOut: 3.5 },
-    frontend: { name: "Frontend", checkIn: 3, checkOut: 4 },
-    finance: { name: "Finance", checkIn: 2, checkOut: 2.5 },
-    hr: { name: "HR", checkIn: 1.5, checkOut: 2 },
-    marketing: { name: "Marketing", checkIn: 3.2, checkOut: 3.8 }
-};
-
-// Initialize
-createDepartmentChart({
-    select: "#departmentSelect",
-    chart: "#chart",
-    data: departmentData
-});
-
-
-const shiftData = {
-  allDay: { name: "All Day", checkIn: 4, checkOut: 7.5 },
-  default: { name: "Default", checkIn: 6, checkOut: 4.5 },
-  test: { name: "Test", checkIn: 6.5, checkOut: 5.5 }
-};
-
-createDepartmentChart({
-  select: "#shiftSelect",
-  chart: "#shiftChart",
-  data: shiftData
-});
 
 
 // Dropdown filters Btn
 
-function initDropdownFilters() {
+// function initDropdownFilters() {
 
-  const dropdown = document.getElementById("filterDropdown");
+//   const dropdown = document.getElementById("filterDropdown");
 
-  // Toggle dropdown
-  document.getElementById("filterToggleBtn")
-    .addEventListener("click", () => {
-      dropdown.style.display =
-        dropdown.style.display === "block" ? "none" : "block";
+//   // Toggle dropdown
+//   document.getElementById("filterToggleBtn")
+//     .addEventListener("click", () => {
+//       dropdown.style.display =
+//         dropdown.style.display === "block" ? "none" : "block";
+//     });
+
+//   document.getElementById("closeFilter")
+//     .addEventListener("click", () => {
+//       dropdown.style.display = "none";
+//     });
+
+//   // Accordion toggle
+//   document.querySelectorAll(".filter-title")
+//     .forEach(title => {
+//       title.addEventListener("click", () => {
+//         const body = document.getElementById(title.dataset.target);
+//         body.style.display =
+//           body.style.display === "block" ? "none" : "block";
+//       });
+//     });
+
+//   // Search inside each section
+//   document.querySelectorAll(".filter-search")
+//     .forEach(input => {
+//       input.addEventListener("keyup", function () {
+//         const value = this.value.toLowerCase();
+//         const labels = this.parentElement.querySelectorAll("label");
+
+//         labels.forEach(label => {
+//           label.style.display =
+//             label.textContent.toLowerCase().includes(value)
+//               ? "block"
+//               : "none";
+//         });
+//       });
+//     });
+
+//   // Clear all
+//   document.getElementById("clearFilters")
+//     .addEventListener("click", () => {
+//       document.querySelectorAll("#filterDropdown input[type='checkbox']")
+//         .forEach(cb => cb.checked = false);
+//     });
+// }
+
+// initDropdownFilters();
+
+
+let theme = document.getElementById('theme');
+if (theme) {
+let theme = document.getElementById('theme');
+if (theme) {
+document.addEventListener("DOMContentLoaded", function () {
+
+    const officialInput = document.getElementById("officialLogo");
+    const whiteInput = document.getElementById("whiteLogo");
+
+    officialInput.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            document.getElementById("officialPreview").src =
+                URL.createObjectURL(file);
+        }
     });
 
-  document.getElementById("closeFilter")
-    .addEventListener("click", () => {
-      dropdown.style.display = "none";
+    whiteInput.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            document.getElementById("whitePreview").src =
+                URL.createObjectURL(file);
+        }
     });
 
-  // Accordion toggle
-  document.querySelectorAll(".filter-title")
-    .forEach(title => {
-      title.addEventListener("click", () => {
-        const body = document.getElementById(title.dataset.target);
-        body.style.display =
-          body.style.display === "block" ? "none" : "block";
-      });
+    window.removeLogo = function(previewId, inputId){
+
+        const preview = document.getElementById(previewId);
+        const input = document.getElementById(inputId);
+
+        if(previewId === "officialPreview"){
+            preview.src = "../assets/images/logo/logo.png";
+        }
+
+        if(previewId === "whitePreview"){
+            preview.src = "../assets/images/logo/logo_dark.png";
+        }
+
+        input.value = "";
+    }
+
+});
+
+
+}
+
+}
+
+
+let Geospatial = document.getElementById('Geospatial');
+if (Geospatial) {
+
+ function initMap() {
+    const centerLoc = { lat: 24.7136, lng: 46.6753 };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: centerLoc,
+        zoom: 5,
+        mapTypeId: "roadmap",
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.TOP_LEFT,
+        },
     });
 
-  // Search inside each section
-  document.querySelectorAll(".filter-search")
-    .forEach(input => {
-      input.addEventListener("keyup", function () {
-        const value = this.value.toLowerCase();
-        const labels = this.parentElement.querySelectorAll("label");
+    const cityCircle = new google.maps.Circle({
+        strokeColor: "#FFC107",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FFC107",
+        fillOpacity: 0.35,
+        map: map,
+        center: centerLoc,
+        radius: 800000, 
+    });
 
-        labels.forEach(label => {
-          label.style.display =
-            label.textContent.toLowerCase().includes(value)
-              ? "block"
-              : "none";
+    const input = document.getElementById("pac-input");
+    const searchBox = new google.maps.places.SearchBox(input);
+
+    map.addListener("bounds_changed", () => {
+        searchBox.setBounds(map.getBounds());
+    });
+
+    searchBox.addListener("places_changed", () => {
+        const places = searchBox.getPlaces();
+
+        if (places.length == 0) return;
+
+        const bounds = new google.maps.LatLngBounds();
+        places.forEach((place) => {
+            if (!place.geometry || !place.geometry.location) return;
+
+            cityCircle.setCenter(place.geometry.location);
+
+            if (place.geometry.viewport) {
+                bounds.union(place.geometry.viewport);
+            } else {
+                bounds.extend(place.geometry.location);
+            }
         });
-      });
-    });
-
-  // Clear all
-  document.getElementById("clearFilters")
-    .addEventListener("click", () => {
-      document.querySelectorAll("#filterDropdown input[type='checkbox']")
-        .forEach(cb => cb.checked = false);
+        map.fitBounds(bounds);
     });
 }
 
-initDropdownFilters();
+window.onload = initMap;
 
+}
 
 
 })(jQuery);

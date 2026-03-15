@@ -643,3 +643,45 @@
     margin-top:20px;
 }
 .addLocation .hidden { display:none; }
+
+.app-logo:hover{
+    opacity:0.8;
+    transform:scale(1.05);
+    transition:0.2s;
+}
+
+#map{
+height:500px;
+width:100%;
+border-radius:10px;
+}
+
+.pac-container{
+z-index:9999;
+}
+
+.marker{
+width:40px;
+height:40px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:bold;
+font-size:12px;
+}
+
+.green{background:#28a745;}
+.orange{background:#f0ad4e;}
+.red{background:#dc3545;}
+
+.legend{
+position:absolute;
+top:15px;
+right:15px;
+background:white;
+padding:10px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
