@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Techsup Tamam connects skilled Saudi professionals with flexible work opportunities, enhancing employment efficiency and individual income. Join our platform to leverage experience, grow careers, and support economic development." />
+  <meta name="keywords"
+    content="Techsup Tamam, flexible work Saudi Arabia, job opportunities, employment solutions, freelance jobs, workforce development, Saudi professionals, gig economy, career growth, remote work Saudi, income growth" />
+  <meta name="author" content="Techsup Tamam" />
+  <link rel="icon" href="../assets/images/logo/logo-rounded.png" />
+  <link rel="shortcut icon" href="../assets/images/logo/logo-rounded.png" />
+  <title>Dashboard | Techsup Tamam</title>
+  <!-- Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Fontawesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css" />
+  <!-- ico-font-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css" />
+  <!-- Themify icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css" />
+  <!-- Flag icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css" />
+  <!-- Feather icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css" />
+
+  <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css" />
+  <!-- Range slider css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/rangeslider/rSlider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/prism.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/fullcalender.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/jsgrid.css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css" />
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+  <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen" />
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
+</head>
+
+<body id="contractList">
+  <!-- loader starts-->
+  <div class="loader-wrapper">
+    <div class="loader">
+      <div class="loader4"></div>
+    </div>
+  </div>
+  <!-- loader ends-->
+  <!-- tap on top starts-->
+  <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+  <!-- tap on tap ends-->
+  <!-- page-wrapper Start-->
+  <div class="page-wrapper compact-wrapper" id="pageWrapper">
+    <!-- Page Header Start-->
+    <div class="page-header">
+      <div class="header-wrapper row m-0">
+        <form class="form-inline search-full col" action="#" method="get">
+          <div class="form-group w-100">
+            <div class="Typeahead Typeahead--twitterUsers">
+              <div class="u-posRelative">
+                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                  placeholder="Search ..." name="q" title="" autofocus />
+                <div class="spinner-border Typeahead-spinner" role="status">
+                  <span class="sr-only">Loading... </span>
+                </div>
+                <i class="close-search" data-feather="x"></i>
+              </div>
+              <div class="Typeahead-menu"></div>
+            </div>
+          </div>
+        </form>
+        <div class="header-logo-wrapper col-auto p-0">
+          <div class="logo-wrapper">
+            <a href="index.html">
+              <img class="img-fluid for-light" src="../assets/images/logo/logo_dark.png" alt="logo-light" />
+              <img class="img-fluid for-dark" src="../assets/images/logo/logo.png" alt="logo-dark" />
+            </a>
+          </div>
+          <div class="toggle-sidebar">
+            <!-- <i class="status_toggle middle sidebar-toggle fa-solid fa-bars" data-feather="align-center"></i> -->
+            <i class="fa-solid fa-bars font-primary"></i>
+          </div>
+        </div>
+        <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
+          <div>
+            <a class="toggle-sidebar" href="#"><i class="iconly-Category icli"></i></a>
+            <div class="d-flex align-items-center gap-2">
+              <h4 class="f-w-600">Welcome back!</h4>
+              <img class="mt-0" src="../assets/images/hand.gif" alt="hand-gif" />
+            </div>
+          </div>
+          <div class="welcome-content d-xl-block d-none">
+            <span class="text-truncate col-12">Here’s what’s happening with your store today.</span>
+          </div>
+        </div>
+        <div class="nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto">
+          <ul class="nav-menus">
+            <li class="d-md-block d-none">
+              <div class="form search-form mb-0">
+                <div class="input-group">
+                  <span class="input-icon">
+                    <svg>
+                      <use href="../assets/svg/icon-sprite.svg#search-header"></use>
+                    </svg>
+                    <input class="w-100" type="search" placeholder="Search" /></span>
+                </div>
+              </div>
+            </li>
+            <li class="d-md-none d-block">
+              <div class="form search-form mb-0">
+                <div class="input-group">
+                  <span class="input-show">
+                    <svg id="searchIcon">
+                      <use href="../assets/svg/icon-sprite.svg#search-header"></use>
+                    </svg>
+                    <div id="searchInput">
+                      <input type="search" placeholder="Search" />
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class="onhover-dropdown">
+              <svg>
+                <use href="../assets/svg/icon-sprite.svg#star"></use>
+              </svg>
+              <div class="onhover-show-div bookmark-flip">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="front">
+                      <h6 class="f-18 mb-0 dropdown-title">Bookmark</h6>
+                      <ul class="bookmark-dropdown">
+                        <li>
+                          <div class="row">
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon">
+                                  <i data-feather="file-text"></i>
+                                </div>
+                                <span>Forms</span>
+                              </div>
+                            </div>
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon">
+                                  <i data-feather="user"></i>
+                                </div>
+                                <span>Profile</span>
+                              </div>
+                            </div>
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon">
+                                  <i data-feather="server"></i>
+                                </div>
+                                <span>Tables</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="text-center">
+                          <a class="flip-btn f-w-700" id="flip-btn" href="javascript:void(0)">Add New Bookmark</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="back">
+                      <ul>
+                        <li>
+                          <div class="bookmark-dropdown flip-back-content">
+                            <input type="text" placeholder="search..." />
+                          </div>
+                        </li>
+                        <li>
+                          <a class="f-w-700 d-block flip-back" id="flip-back" href="javascript:void(0)">Back</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="mode"><i class="moon" data-feather="moon"></i></div>
+            </li>
+            <li class="onhover-dropdown notification-down">
+              <div class="notification-box">
+                <svg>
+                  <use href="../assets/svg/icon-sprite.svg#notification-header"></use>
+                </svg>
+                <span class="badge rounded-pill badge-secondary">4 </span>
+              </div>
+              <div class="onhover-show-div notification-dropdown">
+                <div class="card mb-0">
+                  <div class="card-header">
+                    <div class="common-space">
+                      <h4 class="text-start f-w-600">Notitications</h4>
+                      <div><span>4 New</span></div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="notitications-bar">
+                      <ul class="nav nav-pills nav-primary p-0" id="pills-tab" role="tablist">
+                        <li class="nav-item p-0">
+                          <a class="nav-link active" id="pills-aboutus-tab" data-bs-toggle="pill" href="#pills-aboutus"
+                            role="tab" aria-controls="pills-aboutus" aria-selected="true">All(3)</a>
+                        </li>
+                        <li class="nav-item p-0">
+                          <a class="nav-link" id="pills-blog-tab" data-bs-toggle="pill" href="#pills-blog" role="tab"
+                            aria-controls="pills-blog" aria-selected="false">Messages</a>
+                        </li>
+                        <li class="nav-item p-0">
+                          <a class="nav-link" id="pills-contactus-tab" data-bs-toggle="pill" href="#pills-contactus"
+                            role="tab" aria-controls="pills-contactus" aria-selected="false">Cart</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-aboutus" role="tabpanel"
+                          aria-labelledby="pills-aboutus-tab">
+                          <div class="user-message">
+                            <div class="cart-dropdown notification-all">
+                              <ul>
+                                <li class="pr-0 pl-0 pb-3 pt-3">
+                                  <div class="media">
+                                    <img class="img-fluid b-r-5 me-3 img-60"
+                                      src="../assets/images/other-images/receiver-img.jpg" alt="" />
+                                    <div class="media-body">
+                                      <a class="f-light f-w-500" href="../template/product.html">Men Blue T-Shirt</a>
+                                      <div class="qty-box">
+                                        <div class="input-group">
+                                          <span class="input-group-prepend">
+                                            <button class="btn quantity-left-minus" type="button" data-type="minus"
+                                              data-field="">
+                                              -
+                                            </button></span>
+                                          <input class="form-control input-number" type="text" name="quantity"
+                                            value="1" /><span class="input-group-prepend">
+                                            <button class="btn quantity-right-plus" type="button" data-type="plus"
+                                              data-field="">
+                                              +
+                                            </button></span>
+                                        </div>
+                                      </div>
+                                      <h6 class="font-primary">$695.00</h6>
+                                    </div>
+                                    <div class="close-circle">
+                                      <a class="bg-danger" href="#"><i data-feather="x"></i></a>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <ul>
+                              <li>
+                                <div class="user-alerts">
+                                  <img class="user-image rounded-circle img-fluid me-2"
+                                    src="../assets/images/dashboard/user/5.jpg" alt="user" />
+                                  <div class="user-name">
+                                    <div>
+                                      <h6>
+                                        <a class="f-w-500 f-14" href="../template/user-profile.html">Floyd Miles</a>
+                                      </h6>
+                                      <span class="f-light f-w-500 f-12">Sir, Can i remove part in
+                                        des...</span>
+                                    </div>
+                                    <div>
+                                      <svg>
+                                        <use href="../assets/svg/icon-sprite.svg#more-vertical"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="user-alerts">
+                                  <img class="user-image rounded-circle img-fluid me-2"
+                                    src="../assets/images/dashboard/user/6.jpg" alt="user" />
+                                  <div class="user-name">
+                                    <div>
+                                      <h6>
+                                        <a class="f-w-500 f-14" href="../template/user-profile.html">Dianne Russell</a>
+                                      </h6>
+                                      <span class="f-light f-w-500 f-12">So, what is my next work ?</span>
+                                    </div>
+                                    <div>
+                                      <svg>
+                                        <use href="../assets/svg/icon-sprite.svg#more-vertical"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab">
+                          <div class="notification-card">
+                            <ul>
+                              <li class="notification d-flex w-100 justify-content-between align-items-center">
+                                <div
+                                  class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
+                                  <div class="user-alerts flex-shrink-0">
+                                    <img class="rounded-circle img-fluid img-40"
+                                      src="../assets/images/dashboard/user/3.jpg" alt="user" />
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <div class="common-space user-id w-100">
+                                      <div class="common-space w-100">
+                                        <a class="f-w-500 f-12" href="../template/private-chat.html">Robert D.
+                                          Hambly</a>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <span class="f-w-500 f-light f-12">Hello Miss...😊</span>
+                                    </div>
+                                  </div>
+                                  <span class="f-light f-w-500 f-12">44 sec</span>
+                                </div>
+                              </li>
+                              <li class="notification d-flex w-100 justify-content-between align-items-center">
+                                <div
+                                  class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
+                                  <div class="user-alerts flex-shrink-0">
+                                    <img class="rounded-circle img-fluid img-40"
+                                      src="../assets/images/dashboard/user/7.jpg" alt="user" />
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <div class="common-space user-id w-100">
+                                      <div class="common-space w-100">
+                                        <a class="f-w-500 f-12" href="../template/private-chat.html">Courtney C.
+                                          Strang</a>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <span class="f-w-500 f-light f-12">Wishing You a Happy Birthday Dear..
+                                        🥳🎊</span>
+                                    </div>
+                                  </div>
+                                  <span class="f-light f-w-500 f-12">52 min</span>
+                                </div>
+                              </li>
+                              <li class="notification d-flex w-100 justify-content-between align-items-center">
+                                <div
+                                  class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
+                                  <div class="user-alerts flex-shrink-0">
+                                    <img class="rounded-circle img-fluid img-40"
+                                      src="../assets/images/dashboard/user/5.jpg" alt="user" />
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <div class="common-space user-id w-100">
+                                      <div class="common-space w-100">
+                                        <a class="f-w-500 f-12" href="../template/private-chat.html">Raye T. Sipes</a>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <span class="f-w-500 f-light f-12">Hello Dear!! This Theme Is Very
+                                        beautiful</span>
+                                    </div>
+                                  </div>
+                                  <span class="f-light f-w-500 f-12">48 min</span>
+                                </div>
+                              </li>
+                              <li class="notification d-flex w-100 justify-content-between align-items-center">
+                                <div
+                                  class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
+                                  <div class="user-alerts flex-shrink-0">
+                                    <img class="rounded-circle img-fluid img-40"
+                                      src="../assets/images/dashboard/user/6.jpg" alt="user" />
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <div class="common-space user-id w-100">
+                                      <div class="common-space w-100">
+                                        <a class="f-w-500 f-12" href="../template/private-chat.html">Henry S. Miller</a>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <span class="f-w-500 f-light f-12">You’re older today than yesterday,
+                                        happy birthday!</span>
+                                    </div>
+                                  </div>
+                                  <span class="f-light f-w-500 f-12">3 min</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contactus" role="tabpanel"
+                          aria-labelledby="pills-contactus-tab">
+                          <div class="cart-dropdown mt-4">
+                            <ul>
+                              <li class="pr-0 pl-0 pb-3">
+                                <div class="media">
+                                  <img class="img-fluid b-r-5 me-3 img-60"
+                                    src="../assets/images/other-images/cart-img.jpg" alt="" />
+                                  <div class="media-body">
+                                    <a class="f-light f-w-500" href="../template/product.html">Furniture Chair for
+                                      Home</a>
+                                    <div class="qty-box">
+                                      <div class="input-group">
+                                        <span class="input-group-prepend">
+                                          <button class="btn quantity-left-minus" type="button" data-type="minus"
+                                            data-field="">
+                                            -
+                                          </button></span>
+                                        <input class="form-control input-number" type="text" name="quantity"
+                                          value="1" /><span class="input-group-prepend">
+                                          <button class="btn quantity-right-plus" type="button" data-type="plus"
+                                            data-field="">
+                                            +
+                                          </button></span>
+                                      </div>
+                                    </div>
+                                    <h6 class="font-primary">$500</h6>
+                                  </div>
+                                  <div class="close-circle">
+                                    <a class="bg-danger" href="#"><i data-feather="x"></i></a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="pr-0 pl-0 pb-3 pt-3">
+                                <div class="media">
+                                  <img class="img-fluid b-r-5 me-3 img-60"
+                                    src="../assets/images/other-images/receiver-img.jpg" alt="" />
+                                  <div class="media-body">
+                                    <a class="f-light f-w-500" href="../template/product.html">Men Cotton Blend Blue
+                                      T-Shirt</a>
+                                    <div class="qty-box">
+                                      <div class="input-group">
+                                        <span class="input-group-prepend">
+                                          <button class="btn quantity-left-minus" type="button" data-type="minus"
+                                            data-field="">
+                                            -
+                                          </button></span>
+                                        <input class="form-control input-number" type="text" name="quantity"
+                                          value="1" /><span class="input-group-prepend">
+                                          <button class="btn quantity-right-plus" type="button" data-type="plus"
+                                            data-field="">
+                                            +
+                                          </button></span>
+                                      </div>
+                                    </div>
+                                    <h6 class="font-primary">$695.00</h6>
+                                  </div>
+                                  <div class="close-circle">
+                                    <a class="bg-danger" href="#"><i data-feather="x"></i></a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="mb-3 total">
+                                <a href="../template/checkout.html">
+                                  <h6 class="mb-0">
+                                    Order Total :<span class="f-right">$1195.00
+                                    </span>
+                                  </h6>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-footer pb-0 pr-0 pl-0">
+                          <div class="text-center">
+                            <a class="f-w-700" href="private-chat.html">
+                              <button class="btn btn-primary" type="button" title="btn btn-primary">
+                                Check all
+                              </button></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="profile-nav onhover-dropdown">
+              <div class="media profile-media">
+                <img class="b-r-10" src="../assets/images/dashboard/profile.png" alt="" />
+                <div class="media-body d-xxl-block d-none box-col-none">
+                  <div class="d-flex align-items-center gap-2">
+                    <span>Mohammed Hatem </span><i class="middle fa fa-angle-down"></i>
+                  </div>
+                  <p class="mb-0 font-roboto">Admin</p>
+                </div>
+              </div>
+              <ul class="profile-dropdown onhover-show-div">
+                <li>
+                  <a href="user-profile.html"><i data-feather="user"></i><span>My Profile</span></a>
+                </li>
+                <li>
+                  <a href="letter-box.html"><i data-feather="mail"></i><span>Inbox</span></a>
+                </li>
+                <li>
+                  <a href="edit-profile.html"><i data-feather="settings"></i><span>Settings</span></a>
+                </li>
+                <li>
+                  <a class="btn btn-pill btn-outline-primary btn-sm" href="login.html">Log Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">
+              <div class="ProfileCard-avatar"><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-airplay m-0"
+                ><path
+                    d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                  ></path><polygon
+                    points="12 15 17 21 7 21 12 15"
+                  ></polygon></svg></div>
+              <div class="ProfileCard-details">
+                <div class="ProfileCard-realName">{{name}}</div>
+              </div>
+            </div>
+          </script>
+        <script class="empty-template" type="text/x-handlebars-template">
+            <div class="EmptyMessage">Your search turned up 0 results. This most
+              likely means the backend is down, yikes!</div>
+          </script>
+      </div>
+    </div>
+    <!-- Page Header Ends                              -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+     <div class="sidebar-wrapper" data-layout="stroke-svg">
+        <div class="logo-wrapper">
+          <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
+          <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
+          <div class="toggle-sidebar">
+            <i class="fa-solid fa-bars font-primary"></i>
+          </div>
+        </div>
+        <div class="logo-icon-wrapper w-100">
+          <a href="index.html">
+            <img class="img-fluid image-icon" src="../assets/images/logo/logo-icon.png" alt="Techsup Logo" />
+          </a>
+        </div>
+        <nav class="sidebar-main">
+          <div class="left-arrow" id="left-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div id="sidebar-menu mt-5">
+            <ul class="sidebar-links pt-3" id="simple-bar">
+              <li class="back-btn">
+                <a href="index.html">
+                  <img class="img-fluid" src="../assets/images/logo/logo-icon.png" alt="Techsup Logo" />
+                </a>
+                <div class="mobile-back text-end">
+                  <span>Back </span>
+                  <i class="fa-solid fa-angle-right fs-2" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li class="pin-title sidebar-main-title">
+                <div>
+                  <h6>Pinned</h6>
+                </div>
+              </li>
+              <li class="sidebar-main-title">
+                <div>
+                  <h6 class="lan-1">General</h6>
+                </div>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"> </i>
+                <a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-regular fa-house stroke-icon"></i>
+                  <i class="fa-solid fa-house fill-icon"></i>
+                  <span class="lan-3">Dashboard </span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="index.html">Start</a></li>
+                  <li><a href="index-attendance.html">Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-briefcase stroke-icon"></i>
+                  <i class="fa-solid fa-briefcase fill-icon"></i>
+
+                  <span>Main Info</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="companise-list.html">Companise</a></li>
+                  <li><a href="branches-list.html">Branches</a></li>
+                  <li><a href="departments-list.html">Departments</a></li>
+                  <li><a href="jobtitles-list.html">Job Titles</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-users stroke-icon"></i>
+                  <i class="fa-solid fa-users fill-icon"></i>
+
+                  <span>Employees</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="employee-list.html">Employee List</a></li>
+                  <li><a href="employeeassignments-list.html">Employee Assignments</a></li>
+                </ul>
+              </li>
+              <!-- <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-users stroke-icon"></i>
+                  <i class="fa-solid fa-users fill-icon"></i>
+                  <span class="">Employees</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="employees.html">Employees Start</a></li>
+                  <li>
+                    <a href="employees-attendance.html">Employees Attendance</a>
+                  </li>
+                </ul>
+              </li> -->
+              <!-- <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-sitemap stroke-icon"></i>
+                  <i class="fa-solid fa-sitemap fill-icon"></i>
+                  <span class="">Branches</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="Branches.html">Branches</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-diagram-project stroke-icon"></i>
+                  <i class="fa-solid fa-diagram-project fill-icon"></i>
+                  <span class="">Departments</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="Departments.html">Departments Start</a></li>
+                  <li><a href="Departments-attendance.html">Departments Attendance</a></li>
+                </ul>
+              </li> -->
+             
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-tag fill-icon"></i>
+                  <i class="fa-solid fa-tag stroke-icon"></i>
+                  <span>Tags</span>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li><a href="tags.html">Tags Start</a></li>
+                  <!-- <li><a href="projectcreate.html">Create new</a></li> -->
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-location-dot stroke-icon"></i>
+
+                  <i class="fa-solid fa-location-dot fill-icon"></i>
+                  <span>Location</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="location.html">Location Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title " href="#">
+                  <i class="fa-solid fa-clock-rotate-left stroke-icon"></i>
+                  <i class="fa-solid fa-clock-rotate-left fill-icon"></i>
+                  <span>Shifts</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="shifts.html">Shifts Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-regular fa-calendar-days stroke-icon"></i>
+                  <i class="fa-solid fa-calendar-days fill-icon"></i>
+                  <span>Holidays</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="holidays.html">Holidays Attendance</a></li>
+                </ul>
+              </li>
+               <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-clock stroke-icon"></i>
+                  <i class="fa-solid fa-clock fill-icon"></i>
+
+                  <span>Attendance</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="attendancerecords.html">Attendance Records</a></li>
+                  <li><a href="attendancesummaries.html">Attendance Summaries</a></li>
+                  <li><a href="leavetypes.html">Leave Types</a></li>
+                  <li><a href="leavebalances.html">Leave Balances</a></li>
+                  <li><a href="leaverequests.html">Leave Requests</a></li>
+                  <li><a href="empleave.html">Employee Leaves</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-regular fa-chart-bar stroke-icon"></i>
+                  <i class="fa-solid fa-chart-bar fill-icon"></i>
+                  <span>Reports</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="reports.html">Reports Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-sliders stroke-icon"></i>
+                  <i class="fa-solid fa-sliders fill-icon"></i>
+
+                  <span>Setting</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="setting.html">Setting</a></li>
+                  <li><a href="org-setting.html">Organization Setting</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-main-title">
+                <div>
+                  <h6>Payroll</h6>
+                </div>
+              </li>
+              
+              
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-file stroke-icon"></i>
+                  <i class="fa-solid fa-file fill-icon"></i>
+
+                  <span>Contracts</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="contractlist.html">Contract List</a></li>
+                  <li><a href="empcontracthistory.html">Employee History</a></li>
+                  <li><a href="salarycomponenttype.html">Salary Types</a></li>
+                  <li><a href="salarycomponents.html">Salary Component</a></li>
+                </ul>
+              </li>
+              
+               <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-user-shield stroke-icon"></i>
+                  <i class="fa-solid fa-user-shield fill-icon"></i>
+
+                  <span>Policies</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="payrollpolicies.html">Payroll Policies</a></li>
+                  <li><a href="attendancepolicies.html">Attendance Policies</a></li>
+                  <li><a href="overtimepolicies.html">Overtime Policies</a></li>
+                  <li><a href="taxpolicies.html">Tax Policies</a></li>
+                  <li><a href="taxbrackets.html">Tax Brackets</a></li>
+                  <li><a href="insurancepolicies.html">Iinsurance Policies</a></li>
+                </ul>
+              </li>
+
+              <li class="sidebar-list">
+               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                 <i class="fa-solid fa-sack-dollar stroke-icon"></i>
+                 <i class="fa-solid fa-sack-dollar fill-icon"></i>
+
+                 <span>Payroll</span></a>
+               <ul class="sidebar-submenu">
+                 <li><a href="payroll-cycles.html">Payroll Cycles</a></li>
+                 <li><a href="payroll-variables.html">Payroll Variables</a></li>
+                 <li><a href="payroll-records.html">Payroll Records</a></li>
+                 <li><a href="payroll-details.html">Payroll Details</a></li>
+                 <li><a href="payslips.html">Payslips</a></li>
+                 <li><a href="period.html">Periods</a></li>
+               </ul>
+             </li>
+              
+             <li class="sidebar-list">
+               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                 <i class="fa-solid fa-hand-holding-dollar stroke-icon"></i>
+                 <i class="fa-solid fa-hand-holding-dollar fill-icon"></i>
+
+                 <span>Loans</span></a>
+               <ul class="sidebar-submenu">
+                 <li><a href="employee-loans.html" class="text-bg-danger">Employee Loans</a></li>
+                 <li><a href="employee-advances.html" class="text-bg-danger">Employee Advances</a></li>
+               </ul>
+             </li>
+             
+             <li class="sidebar-list">
+               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                 <i class="fa-solid fa-solid fa-file-export stroke-icon"></i>
+                 <i class="fa-solid fa-solid fa-file-export fill-icon"></i>
+
+                 <span>Payroll Exports</span></a>
+               <ul class="sidebar-submenu">
+                 <li><a href="payroll-exports.html" class="text-bg-danger">Payroll Exports</a></li>
+                 <li><a href="audit-logs.html" class="text-bg-danger">Audit Logs</a></li>
+               </ul>
+             </li>
+              
+            </ul>
+            <div class="right-arrow" id="right-arrow">
+              <i data-feather="arrow-right"></i>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Page Sidebar Ends-->
+      <div class="page-body">
+
+        <!-- Container-fluid starts-->
+        <div class="container-fluid my-5">
+  <div class="card shadow-lg border-0 rounded-4 p-3">
+
+    <!-- Header -->
+    <div class="bg-primary text-white p-4 rounded-top-4 d-flex justify-content-between align-items-center">
+      <div>
+        <h4 class="mb-0 text-white">Add Payroll Policy</h4>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="card-body p-4">
+      <form id="salaryPolicyForm">
+
+        <div class="row g-4">
+
+          <!-- Basic -->
+          <div class="col-12">
+            <h5>Basic Information</h5>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Policy Name</label>
+            <input type="text" class="form-control" name="name" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Company</label>
+            <select class="form-select" name="company_id">
+              <option value="1">Company 1</option>
+            </select>
+          </div>
+
+          <!-- Salary Divisor -->
+          <div class="col-12 mt-4">
+            <h5>Salary Calculation</h5>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Salary Divisor Method</label>
+            <select class="form-select" name="salary_divisor_method">
+              <option value="30">30 Days</option>
+              <option value="working_days">Working Days</option>
+            </select>
+          </div>
+
+          <!-- Late -->
+          <div class="col-md-6">
+            <label class="form-label">Late Deduction</label>
+            <select class="form-select" name="late_deduction_method">
+              <option value="per_minute">Per Minute</option>
+              <option value="per_hour">Per Hour</option>
+              <option value="grace">With Grace Period</option>
+            </select>
+          </div>
+
+          <!-- Absence -->
+          <div class="col-md-6">
+            <label class="form-label">Absence Deduction</label>
+            <select class="form-select" name="absence_deduction_method">
+              <option value="full_day">Full Day Deduction</option>
+              <option value="half_day">Half Day</option>
+            </select>
+          </div>
+
+          <!-- Unpaid Leave -->
+          <div class="col-md-6">
+            <label class="form-label">Unpaid Leave Deduction</label>
+            <select class="form-select" name="unpaid_leave_deduction_method">
+              <option value="per_day">Per Day</option>
+              <option value="pro_rate">Pro Rated</option>
+            </select>
+          </div>
+
+          <!-- Rounding -->
+          <div class="col-md-6">
+            <label class="form-label">Rounding Method</label>
+            <select class="form-select" name="rounding_method">
+              <option value="nearest">Nearest</option>
+              <option value="up">Round Up</option>
+              <option value="down">Round Down</option>
+            </select>
+          </div>
+
+          <!-- Active -->
+          <div class="col-md-6 d-flex align-items-end">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" name="active" checked>
+              <label class="form-check-label">Active Policy</label>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="col-12 mt-3">
+            <div class="alert alert-info">
+              <i class="fa-solid fa-circle-info"></i>
+              This policy will control how salaries are calculated including deductions, overtime, and rounding.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="mt-4 d-flex justify-content-end gap-2">
+          <button type="reset" class="btn btn-outline-secondary">
+            Reset
+          </button>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-save"></i> Save Policy
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+        <!-- footer start-->
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 footer-copyright text-center">
+              <p class="mb-0">Copyright 2026 © Techsup Tamam</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery.min.js"></script>
+  <!-- Bootstrap js-->
+  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- feather icon js-->
+  <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+  <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+  <!-- scrollbar js-->
+  <script src="../assets/js/scrollbar/simplebar.js"></script>
+  <script src="../assets/js/scrollbar/custom.js"></script>
+  <!-- Sidebar jquery-->
+  <script src="../assets/js/config.js"></script>
+  <!-- Plugins JS start-->
+  <script src="../assets/js/sidebar-menu.js"></script>
+  <script src="../assets/js/sidebar-pin.js"></script>
+  <script src="../assets/js/animation/wow/wow.min.js"></script>
+  <script src="../assets/js/jsgrid/jsgrid.min.js"></script>
+  <script src="../assets/js/jsgrid/griddata.js"></script>
+  <script src="../assets/js/jsgrid/jsgrid.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <!-- Plugins JS Ends-->
+  <!-- Theme js-->
+  <script src="../assets/js/script.js"></script>
+  <!--script(src='../assets/js/theme-customizer/customizer.js')-->
+  <script>
+    new WOW().init();
+  </script>
+</body>
+
+</html>

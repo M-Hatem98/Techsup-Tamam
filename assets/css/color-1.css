@@ -685,3 +685,25 @@ padding:10px;
 border-radius:8px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
+
+@media print {
+  /* Hide everything */
+  body * {
+    visibility: hidden;
+  }
+  /* Show only the card we want and its children */
+  #contractCard, #contractCard * {
+    visibility: visible;
+  }
+  /* Position the card at the top left of the paper */
+  #contractCard {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  /* Hide the print button itself on the paper */
+  .btn {
+    display: none !important;
+  }
+}
