@@ -773,7 +773,7 @@
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
                  <li><a href="period.html">Periods</a></li>
-                 <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
                </ul>
              </li>
               
@@ -809,122 +809,90 @@
         </nav>
       </div>
       <!-- Page Sidebar Ends-->
-     
       <div class="page-body">
 
         <!-- Container-fluid starts-->
-        <div class="container-fluid my-5">
-           <div class="card attendance-card p-3">
-                        <div class="d-flex attendance-header justify-content-between align-items-center my-3">
-                            <h4 class="mb-0">Periods</h4>
+       <div class="container-fluid my-5">
+  <div class="card shadow-lg border-0 rounded-4 p-3">
 
-                            <div class="d-flex gap-2">
-                                <a href="add-period.html" class="btn btn-outline-secondary">
-                                    New Period<i class="fa fa-add ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
+    <!-- Header -->
+    <div class="bg-primary text-white p-4 rounded-top-4">
+      <h4 class="mb-0 text-white">Create New Loan</h4>
+    </div>
 
-    <!-- Table -->
-    <div class="table-responsive">
-      <table class="table table-hover align-middle mb-0">
+    <!-- Form -->
+    <div class="card-body p-4">
+      <form id="loanForm">
 
-        <thead class="table-light">
-          <tr>
-            <th>ID</th>
-            <th>Company</th>
-            <th>Period Name</th>
-            <th>Type</th>
-            <th>Start</th>
-            <th>End</th>
-            <th>Status</th>
-            <th>Active</th>
-            <th>Closed At</th>
-            <th>Closed By</th>
-            <th class="text-center">Actions</th>
-          </tr>
-        </thead>
+        <div class="row g-4">
 
-        <tbody>
+          <!-- Employee -->
+          <div class="col-md-6">
+            <label class="form-label">Employee</label>
+            <select class="form-select" name="employee_id">
+              <option>Ahmed Mohamed</option>
+              <option>Omar Ali</option>
+            </select>
+          </div>
 
-          <tr>
-            <td>1-2026</td>
-            <td>Company 1</td>
-            <td>January 2026</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Jan 2026</td>
-            <td>31 Jan 2026</td>
-            <td><span class="badge bg-success">Open</span></td>
-            <td><span class="badge bg-success">Yes</span></td>
-            <td>-</td>
-            <td>-</td>
+          <!-- Amount -->
+          <div class="col-md-6">
+            <label class="form-label">Loan Amount</label>
+            <input type="number" class="form-control" name="amount" placeholder="10000">
+          </div>
 
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
-                  <li><a class="dropdown-item">Close Period</a></li>
-                  <li><a class="dropdown-item text-danger">Lock</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr>
+          <!-- Installment -->
+          <div class="col-md-4">
+            <label class="form-label">Installment Amount</label>
+            <input type="number" class="form-control" name="installment_amount">
+          </div>
 
-          <tr>
-            <td>12-2025</td>
-            <td>Company 1</td>
-            <td>December 2025</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Dec 2025</td>
-            <td>31 Dec 2025</td>
-            <td><span class="badge bg-warning text-dark">Closed</span></td>
-            <td><span class="badge bg-secondary">No</span></td>
-            <td>01 Jan 2026</td>
-            <td>Admin</td>
+          <!-- Start Cycle -->
+          <div class="col-md-4">
+            <label class="form-label">Start Cycle</label>
+            <select class="form-select" name="start_cycle_id">
+              <option>Jan 2026</option>
+              <option>Feb 2026</option>
+            </select>
+          </div>
 
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
-                  <li><a class="dropdown-item text-danger">Lock</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr>
+          <!-- End Cycle -->
+          <div class="col-md-4">
+            <label class="form-label">End Cycle</label>
+            <select class="form-select" name="end_cycle_id">
+              <option>Oct 2026</option>
+              <option>Nov 2026</option>
+            </select>
+          </div>
 
-          <tr>
-            <td>11-2025</td>
-            <td>Company 2</td>
-            <td>November 2025</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Nov 2025</td>
-            <td>30 Nov 2025</td>
-            <td><span class="badge bg-dark">Locked</span></td>
-            <td><span class="badge bg-secondary">No</span></td>
-            <td>01 Dec 2025</td>
-            <td>HR Manager</td>
+          <!-- Balance -->
+          <div class="col-md-6">
+            <label class="form-label">Balance</label>
+            <input type="number" class="form-control" name="balance" placeholder="Auto or manual">
+          </div>
 
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr>
+          <!-- Status -->
+          <div class="col-md-6">
+            <label class="form-label">Status</label>
+            <select class="form-select" name="status">
+              <option value="ongoing">Ongoing</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
 
-        </tbody>
+        </div>
 
-      </table>
+        <!-- Buttons -->
+        <div class="mt-4 d-flex justify-content-end gap-2">
+          <button type="reset" class="btn btn-outline-secondary">Reset</button>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-save"></i> Save Loan
+          </button>
+        </div>
+
+      </form>
     </div>
 
   </div>

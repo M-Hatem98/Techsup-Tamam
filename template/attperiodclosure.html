@@ -542,7 +542,7 @@
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
-   <div class="sidebar-wrapper" data-layout="stroke-svg">
+     <div class="sidebar-wrapper" data-layout="stroke-svg">
         <div class="logo-wrapper">
           <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
           <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
@@ -773,7 +773,7 @@
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
                  <li><a href="period.html">Periods</a></li>
-                 <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
                </ul>
              </li>
               
@@ -814,33 +814,31 @@
 
         <!-- Container-fluid starts-->
         <div class="container-fluid my-5">
-           <div class="card attendance-card p-3">
-                        <div class="d-flex attendance-header justify-content-between align-items-center my-3">
-                            <h4 class="mb-0">Periods</h4>
+  <div class="card shadow-lg border-0 rounded-4 p-3">
 
-                            <div class="d-flex gap-2">
-                                <a href="add-period.html" class="btn btn-outline-secondary">
-                                    New Period<i class="fa fa-add ms-1"></i>
-                                </a>
-                            </div>
+      <div class="d-flex attendance-header justify-content-between align-items-center my-3">
+                            <h4 class="mb-0">Attendance Period Closures</h4>
+                             <div style="width: 250px;">
+        <select class="form-select" id="periodFilter">
+          <option>January 2026</option>
+          <option>February 2026</option>
+        </select>
+      </div>
                         </div>
-
-    <!-- Table -->
+  
+     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover align-middle mb-0">
 
         <thead class="table-light">
           <tr>
             <th>ID</th>
-            <th>Company</th>
-            <th>Period Name</th>
-            <th>Type</th>
-            <th>Start</th>
-            <th>End</th>
-            <th>Status</th>
-            <th>Active</th>
-            <th>Closed At</th>
-            <th>Closed By</th>
+            <th>Employee</th>
+            <th>Total Days</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Overtime (hrs)</th>
+            <th>Late (min)</th>
             <th class="text-center">Actions</th>
           </tr>
         </thead>
@@ -848,16 +846,13 @@
         <tbody>
 
           <tr>
-            <td>1-2026</td>
-            <td>Company 1</td>
-            <td>January 2026</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Jan 2026</td>
-            <td>31 Jan 2026</td>
-            <td><span class="badge bg-success">Open</span></td>
-            <td><span class="badge bg-success">Yes</span></td>
-            <td>-</td>
-            <td>-</td>
+            <td>1</td>
+            <td>Ahmed Mohamed</td>
+            <td>30</td>
+            <td class="text-success">26</td>
+            <td class="text-danger">4</td>
+            <td>12</td>
+            <td>45</td>
 
             <td class="text-center">
               <div class="dropdown">
@@ -865,25 +860,21 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
-                  <li><a class="dropdown-item">Close Period</a></li>
-                  <li><a class="dropdown-item text-danger">Lock</a></li>
+                  <li><a class="dropdown-item">View Details</a></li>
+                  <li><a class="dropdown-item">Adjust</a></li>
                 </ul>
               </div>
             </td>
           </tr>
 
           <tr>
-            <td>12-2025</td>
-            <td>Company 1</td>
-            <td>December 2025</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Dec 2025</td>
-            <td>31 Dec 2025</td>
-            <td><span class="badge bg-warning text-dark">Closed</span></td>
-            <td><span class="badge bg-secondary">No</span></td>
-            <td>01 Jan 2026</td>
-            <td>Admin</td>
+            <td>2</td>
+            <td>Omar Ali</td>
+            <td>30</td>
+            <td class="text-success">28</td>
+            <td class="text-danger">2</td>
+            <td>5</td>
+            <td>10</td>
 
             <td class="text-center">
               <div class="dropdown">
@@ -891,24 +882,20 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
-                  <li><a class="dropdown-item text-danger">Lock</a></li>
+                  <li><a class="dropdown-item">View Details</a></li>
                 </ul>
               </div>
             </td>
           </tr>
 
           <tr>
-            <td>11-2025</td>
-            <td>Company 2</td>
-            <td>November 2025</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Nov 2025</td>
-            <td>30 Nov 2025</td>
-            <td><span class="badge bg-dark">Locked</span></td>
-            <td><span class="badge bg-secondary">No</span></td>
-            <td>01 Dec 2025</td>
-            <td>HR Manager</td>
+            <td>3</td>
+            <td>Sara Hassan</td>
+            <td>30</td>
+            <td class="text-success">25</td>
+            <td class="text-danger">5</td>
+            <td>8</td>
+            <td>60</td>
 
             <td class="text-center">
               <div class="dropdown">
@@ -916,7 +903,7 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
+                  <li><a class="dropdown-item">View Details</a></li>
                 </ul>
               </div>
             </td>

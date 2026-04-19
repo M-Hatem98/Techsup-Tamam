@@ -542,7 +542,7 @@
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
-   <div class="sidebar-wrapper" data-layout="stroke-svg">
+    <div class="sidebar-wrapper" data-layout="stroke-svg">
         <div class="logo-wrapper">
           <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
           <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
@@ -773,7 +773,7 @@
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
                  <li><a href="period.html">Periods</a></li>
-                 <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
                </ul>
              </li>
               
@@ -814,17 +814,17 @@
 
         <!-- Container-fluid starts-->
         <div class="container-fluid my-5">
-           <div class="card attendance-card p-3">
-                        <div class="d-flex attendance-header justify-content-between align-items-center my-3">
-                            <h4 class="mb-0">Periods</h4>
+  <div class="card shadow-lg border-0 rounded-4 p-3">
+
+      <div class="d-flex attendance-header justify-content-between align-items-center my-3">
+                            <h4 class="mb-0">Employee Advances</h4>
 
                             <div class="d-flex gap-2">
-                                <a href="add-period.html" class="btn btn-outline-secondary">
-                                    New Period<i class="fa fa-add ms-1"></i>
+                                <a href="add-advance.html" class="btn btn-outline-secondary">
+                                    New Advance<i class="fa fa-add ms-1"></i>
                                 </a>
                             </div>
                         </div>
-
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover align-middle mb-0">
@@ -832,15 +832,12 @@
         <thead class="table-light">
           <tr>
             <th>ID</th>
-            <th>Company</th>
-            <th>Period Name</th>
-            <th>Type</th>
-            <th>Start</th>
-            <th>End</th>
+            <th>Employee</th>
+            <th>Amount</th>
+            <th>Request Date</th>
+            <th>Approved Date</th>
+            <th>Deduction Cycle</th>
             <th>Status</th>
-            <th>Active</th>
-            <th>Closed At</th>
-            <th>Closed By</th>
             <th class="text-center">Actions</th>
           </tr>
         </thead>
@@ -848,73 +845,67 @@
         <tbody>
 
           <tr>
-            <td>1-2026</td>
-            <td>Company 1</td>
-            <td>January 2026</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Jan 2026</td>
-            <td>31 Jan 2026</td>
-            <td><span class="badge bg-success">Open</span></td>
-            <td><span class="badge bg-success">Yes</span></td>
-            <td>-</td>
-            <td>-</td>
+            <td>1</td>
+            <td>Ahmed Mohamed</td>
+            <td>2,000 EGP</td>
+            <td>05 Mar 2026</td>
+            <td>06 Mar 2026</td>
+            <td>April 2026</td>
+            <td><span class="badge bg-success">Approved</span></td>
 
             <td class="text-center">
               <div class="dropdown">
                 <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
+
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item">View</a></li>
-                  <li><a class="dropdown-item">Close Period</a></li>
-                  <li><a class="dropdown-item text-danger">Lock</a></li>
+                  <li><a class="dropdown-item">Edit</a></li>
+                  <li><a class="dropdown-item text-danger">Cancel</a></li>
                 </ul>
               </div>
             </td>
           </tr>
 
           <tr>
-            <td>12-2025</td>
-            <td>Company 1</td>
-            <td>December 2025</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Dec 2025</td>
-            <td>31 Dec 2025</td>
-            <td><span class="badge bg-warning text-dark">Closed</span></td>
-            <td><span class="badge bg-secondary">No</span></td>
-            <td>01 Jan 2026</td>
-            <td>Admin</td>
+            <td>2</td>
+            <td>Omar Ali</td>
+            <td>1,500 EGP</td>
+            <td>10 Mar 2026</td>
+            <td>-</td>
+            <td>-</td>
+            <td><span class="badge bg-warning text-dark">Pending</span></td>
 
             <td class="text-center">
               <div class="dropdown">
                 <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
+
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">View</a></li>
-                  <li><a class="dropdown-item text-danger">Lock</a></li>
+                  <li><a class="dropdown-item">Approve</a></li>
+                  <li><a class="dropdown-item text-danger">Reject</a></li>
                 </ul>
               </div>
             </td>
           </tr>
 
           <tr>
-            <td>11-2025</td>
-            <td>Company 2</td>
-            <td>November 2025</td>
-            <td><span class="badge bg-primary">Payroll</span></td>
-            <td>01 Nov 2025</td>
-            <td>30 Nov 2025</td>
-            <td><span class="badge bg-dark">Locked</span></td>
-            <td><span class="badge bg-secondary">No</span></td>
-            <td>01 Dec 2025</td>
-            <td>HR Manager</td>
+            <td>3</td>
+            <td>Sara Hassan</td>
+            <td>3,000 EGP</td>
+            <td>01 Feb 2026</td>
+            <td>02 Feb 2026</td>
+            <td>March 2026</td>
+            <td><span class="badge bg-danger">Rejected</span></td>
 
             <td class="text-center">
               <div class="dropdown">
                 <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
+
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item">View</a></li>
                 </ul>

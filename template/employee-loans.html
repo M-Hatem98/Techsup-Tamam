@@ -542,7 +542,7 @@
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
-     <div class="sidebar-wrapper" data-layout="stroke-svg">
+    <div class="sidebar-wrapper" data-layout="stroke-svg">
         <div class="logo-wrapper">
           <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
           <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
@@ -699,6 +699,8 @@
                   <li><a href="leavebalances.html">Leave Balances</a></li>
                   <li><a href="leaverequests.html">Leave Requests</a></li>
                   <li><a href="empleave.html">Employee Leaves</a></li>
+                  <li><a href="attperiod.html">Periods</a></li>
+                  <li><a href="attperiodclosure.html">Period Closures</a></li>
                 </ul>
               </li>
               <li class="sidebar-list">
@@ -771,6 +773,7 @@
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
                  <li><a href="period.html">Periods</a></li>
+                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
                </ul>
              </li>
               
@@ -781,8 +784,8 @@
 
                  <span>Loans</span></a>
                <ul class="sidebar-submenu">
-                 <li><a href="employee-loans.html" class="text-bg-danger">Employee Loans</a></li>
-                 <li><a href="employee-advances.html" class="text-bg-danger">Employee Advances</a></li>
+                 <li><a href="employee-loans.html"  >Employee Loans</a></li>
+                 <li><a href="employee-advances.html"  >Employee Advances</a></li>
                </ul>
              </li>
              
@@ -793,8 +796,8 @@
 
                  <span>Payroll Exports</span></a>
                <ul class="sidebar-submenu">
-                 <li><a href="payroll-exports.html" class="text-bg-danger">Payroll Exports</a></li>
-                 <li><a href="audit-logs.html" class="text-bg-danger">Audit Logs</a></li>
+                 <li><a href="payroll-exports.html"  >Payroll Exports</a></li>
+                 <li><a href="audit-logs.html"  >Audit Logs</a></li>
                </ul>
              </li>
               
@@ -814,15 +817,14 @@
   <div class="card shadow-lg border-0 rounded-4 p-3">
 
       <div class="d-flex attendance-header justify-content-between align-items-center my-3">
-                            <h4 class="mb-0">Payslips</h4>
+                            <h4 class="mb-0">Employee Loans</h4>
 
                             <div class="d-flex gap-2">
-                                <a href="add-payslip.html" class="btn btn-outline-secondary">
-                                    New Payslips<i class="fa fa-add ms-1"></i>
+                                <a href="add-loan.html" class="btn btn-outline-secondary">
+                                    New Loan<i class="fa fa-add ms-1"></i>
                                 </a>
                             </div>
                         </div>
-
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover align-middle mb-0">
@@ -830,29 +832,28 @@
         <thead class="table-light">
           <tr>
             <th>ID</th>
-            <th>Payslip No</th>
-            <th>Payroll Record</th>
-            <th>Generated At</th>
-            <th>File Path</th>
-            <th>Published To</th>
+            <th>Employee</th>
+            <th>Amount</th>
+            <th>Installment</th>
+            <th>Start Cycle</th>
+            <th>End Cycle</th>
+            <th>Balance</th>
+            <th>Status</th>
             <th class="text-center">Actions</th>
           </tr>
         </thead>
 
         <tbody>
 
-          <!-- Row 1 -->
           <tr>
             <td>1</td>
-            <td>PS-2026-001</td>
-            <td>PR-001</td>
-            <td>01 Feb 2026</td>
-            <td>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fa-solid fa-file-pdf"></i> View
-              </a>
-            </td>
-            <td><span class="badge bg-success">Published</span></td>
+            <td>Ahmed Mohamed</td>
+            <td>10,000 EGP</td>
+            <td>1,000 EGP</td>
+            <td>Jan 2026</td>
+            <td>Oct 2026</td>
+            <td class="text-danger">5,000 EGP</td>
+            <td><span class="badge bg-warning text-dark">Ongoing</span></td>
 
             <td class="text-center">
               <div class="dropdown">
@@ -861,26 +862,23 @@
                 </button>
 
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item"><i class="fa-solid fa-eye me-2"></i> Preview</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-print me-2"></i> Print</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-download me-2"></i> Download</a></li>
+                  <li><a class="dropdown-item">View</a></li>
+                  <li><a class="dropdown-item">Edit</a></li>
+                  <li><a class="dropdown-item text-danger">Close Loan</a></li>
                 </ul>
               </div>
             </td>
           </tr>
 
-          <!-- Row 2 -->
           <tr>
             <td>2</td>
-            <td>PS-2026-002</td>
-            <td>PR-002</td>
-            <td>01 Feb 2026</td>
-            <td>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fa-solid fa-file-pdf"></i> View
-              </a>
-            </td>
-            <td><span class="badge bg-warning text-dark">Not Published</span></td>
+            <td>Omar Ali</td>
+            <td>5,000 EGP</td>
+            <td>500 EGP</td>
+            <td>Feb 2026</td>
+            <td>Nov 2026</td>
+            <td class="text-success">0 EGP</td>
+            <td><span class="badge bg-success">Completed</span></td>
 
             <td class="text-center">
               <div class="dropdown">
@@ -889,8 +887,7 @@
                 </button>
 
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">Preview</a></li>
-                  <li><a class="dropdown-item">Publish</a></li>
+                  <li><a class="dropdown-item">View</a></li>
                 </ul>
               </div>
             </td>

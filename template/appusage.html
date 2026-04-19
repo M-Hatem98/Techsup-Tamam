@@ -613,155 +613,271 @@
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper" data-layout="stroke-svg">
-                <div class="logo-wrapper">
-                    <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png"
-                            alt="Techsup Logo" /></a>
-                    <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
-                    <div class="toggle-sidebar">
-                        <i class="fa-solid fa-bars font-primary"></i>
-                    </div>
+        <div class="logo-wrapper">
+          <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
+          <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
+          <div class="toggle-sidebar">
+            <i class="fa-solid fa-bars font-primary"></i>
+          </div>
+        </div>
+        <div class="logo-icon-wrapper w-100">
+          <a href="index.html">
+            <img class="img-fluid image-icon" src="../assets/images/logo/logo-icon.png" alt="Techsup Logo" />
+          </a>
+        </div>
+        <nav class="sidebar-main">
+          <div class="left-arrow" id="left-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div id="sidebar-menu mt-5">
+            <ul class="sidebar-links pt-3" id="simple-bar">
+              <li class="back-btn">
+                <a href="index.html">
+                  <img class="img-fluid" src="../assets/images/logo/logo-icon.png" alt="Techsup Logo" />
+                </a>
+                <div class="mobile-back text-end">
+                  <span>Back </span>
+                  <i class="fa-solid fa-angle-right fs-2" aria-hidden="true"></i>
                 </div>
-                <div class="logo-icon-wrapper w-100">
-                    <a href="index.html">
-                        <img class="img-fluid image-icon" src="../assets/images/logo/logo-icon.png"
-                            alt="Techsup Logo" />
-                    </a>
+              </li>
+              <li class="pin-title sidebar-main-title">
+                <div>
+                  <h6>Pinned</h6>
                 </div>
-                <nav class="sidebar-main">
-                    <div class="left-arrow" id="left-arrow">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </div>
-                    <div id="sidebar-menu mt-5">
-                        <ul class="sidebar-links pt-3" id="simple-bar">
-                            <li class="back-btn">
-                                <a href="index.html">
-                                    <img class="img-fluid" src="../assets/images/logo/logo-icon.png"
-                                        alt="Techsup Logo" />
-                                </a>
-                                <div class="mobile-back text-end">
-                                    <span>Back </span>
-                                    <i class="fa-solid fa-angle-right fs-2" aria-hidden="true"></i>
-                                </div>
-                            </li>
-                            <li class="pin-title sidebar-main-title">
-                                <div>
-                                    <h6>Pinned</h6>
-                                </div>
-                            </li>
-                            <li class="sidebar-main-title">
-                                <div>
-                                    <h6 class="lan-1">General</h6>
-                                </div>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"> </i>
-                                <a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-regular fa-house stroke-icon"></i>
-                                    <i class="fa-solid fa-house fill-icon"></i>
-                                    <span class="lan-3">Dashboard </span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="index.html">Start</a></li>
-                                    <li><a href="index-attendance.html">Attendance</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <!-- Stroke / outline style -->
-                                    <i class="fa-solid fa-users stroke-icon"></i>
-                                    <i class="fa-solid fa-users fill-icon"></i>
-                                    <span class="">Employees</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="employees.html">Employees Start</a></li>
-                                    <li>
-                                        <a href="employees-attendance.html">Employees Attendance</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-solid fa-diagram-project stroke-icon"></i>
-                                    <i class="fa-solid fa-diagram-project fill-icon"></i>
-                                    <span class="">Departments</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="Departments.html">Departments Start</a></li>
-                                    <li>
-                                        <a href="Departments-attendance.html">Departments Attendance</a>
-                                    </li>
-                                    <!-- <li><a href="layout-dark.html">Dark Layout</a></li>
-                    <li><a href="hide-on-scroll.html">Hide Nav Scroll</a></li> -->
-                                </ul>
-                            </li>
-                            <!-- <li class="sidebar-main-title">
-                  <div>
-                    <h6 class="lan-8">Applications</h6>
-                  </div>
-                </li> -->
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-solid fa-tag fill-icon"></i>
-                                    <i class="fa-solid fa-tag stroke-icon"></i>
-                                    <span>Tags</span>
-                                </a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="tags.html">Tags Start</a></li>
-                                    <!-- <li><a href="projectcreate.html">Create new</a></li> -->
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-solid fa-location-dot stroke-icon"></i>
+              </li>
+              <li class="sidebar-main-title">
+                <div>
+                  <h6 class="lan-1">General</h6>
+                </div>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"> </i>
+                <a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-regular fa-house stroke-icon"></i>
+                  <i class="fa-solid fa-house fill-icon"></i>
+                  <span class="lan-3">Dashboard </span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="index.html">Start</a></li>
+                  <li><a href="index-attendance.html">Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-briefcase stroke-icon"></i>
+                  <i class="fa-solid fa-briefcase fill-icon"></i>
 
-                                    <i class="fa-solid fa-location-dot fill-icon"></i>
-                                    <span>Location</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="location.html">Location Attendance</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-solid fa-clock-rotate-left stroke-icon"></i>
-                                    <i class="fa-solid fa-clock-rotate-left fill-icon"></i>
-                                    <span>Shifts</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="shifts.html">Shifts Attendance</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-regular fa-calendar-days stroke-icon"></i>
-                                    <i class="fa-solid fa-calendar-days fill-icon"></i>
-                                    <span>Holidays</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="holidays.html">Holidays Attendance</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-regular fa-chart-bar stroke-icon"></i>
-                                    <i class="fa-solid fa-chart-bar fill-icon"></i>
-                                    <span>Reports</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="reports.html">Reports Attendance</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <i class="fa-solid fa-sliders stroke-icon"></i>
-                                    <i class="fa-solid fa-sliders fill-icon"></i>
+                  <span>Main Info</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="companise-list.html">Companise</a></li>
+                  <li><a href="branches-list.html">Branches</a></li>
+                  <li><a href="departments-list.html">Departments</a></li>
+                  <li><a href="jobtitles-list.html">Job Titles</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-users stroke-icon"></i>
+                  <i class="fa-solid fa-users fill-icon"></i>
 
-                                    <span>Setting</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="setting.html">Setting</a></li>
-                                    <li><a href="org-setting.html">Organization Setting</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="right-arrow" id="right-arrow">
-                            <i data-feather="arrow-right"></i>
-                        </div>
-                    </div>
-                </nav>
+                  <span>Employees</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="employee-list.html">Employee List</a></li>
+                  <li><a href="employeeassignments-list.html">Employee Assignments</a></li>
+                </ul>
+              </li>
+              <!-- <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-users stroke-icon"></i>
+                  <i class="fa-solid fa-users fill-icon"></i>
+                  <span class="">Employees</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="employees.html">Employees Start</a></li>
+                  <li>
+                    <a href="employees-attendance.html">Employees Attendance</a>
+                  </li>
+                </ul>
+              </li> -->
+              <!-- <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-sitemap stroke-icon"></i>
+                  <i class="fa-solid fa-sitemap fill-icon"></i>
+                  <span class="">Branches</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="Branches.html">Branches</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-diagram-project stroke-icon"></i>
+                  <i class="fa-solid fa-diagram-project fill-icon"></i>
+                  <span class="">Departments</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="Departments.html">Departments Start</a></li>
+                  <li><a href="Departments-attendance.html">Departments Attendance</a></li>
+                </ul>
+              </li> -->
+             
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-tag fill-icon"></i>
+                  <i class="fa-solid fa-tag stroke-icon"></i>
+                  <span>Tags</span>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li><a href="tags.html">Tags Start</a></li>
+                  <!-- <li><a href="projectcreate.html">Create new</a></li> -->
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-location-dot stroke-icon"></i>
+
+                  <i class="fa-solid fa-location-dot fill-icon"></i>
+                  <span>Location</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="location.html">Location Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title " href="#">
+                  <i class="fa-solid fa-clock-rotate-left stroke-icon"></i>
+                  <i class="fa-solid fa-clock-rotate-left fill-icon"></i>
+                  <span>Shifts</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="shifts.html">Shifts Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-regular fa-calendar-days stroke-icon"></i>
+                  <i class="fa-solid fa-calendar-days fill-icon"></i>
+                  <span>Holidays</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="holidays.html">Holidays Attendance</a></li>
+                </ul>
+              </li>
+               <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-clock stroke-icon"></i>
+                  <i class="fa-solid fa-clock fill-icon"></i>
+
+                  <span>Attendance</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="attendancerecords.html">Attendance Records</a></li>
+                  <li><a href="attendancesummaries.html">Attendance Summaries</a></li>
+                  <li><a href="leavetypes.html">Leave Types</a></li>
+                  <li><a href="leavebalances.html">Leave Balances</a></li>
+                  <li><a href="leaverequests.html">Leave Requests</a></li>
+                  <li><a href="empleave.html">Employee Leaves</a></li>
+                  <li><a href="attperiod.html">Periods</a></li>
+                  <li><a href="attperiodclosure.html">Period Closures</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-regular fa-chart-bar stroke-icon"></i>
+                  <i class="fa-solid fa-chart-bar fill-icon"></i>
+                  <span>Reports</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="reports.html">Reports Attendance</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-sliders stroke-icon"></i>
+                  <i class="fa-solid fa-sliders fill-icon"></i>
+
+                  <span>Setting</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="setting.html">Setting</a></li>
+                  <li><a href="org-setting.html">Organization Setting</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-main-title">
+                <div>
+                  <h6>Payroll</h6>
+                </div>
+              </li>
+              
+              
+              <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-file stroke-icon"></i>
+                  <i class="fa-solid fa-file fill-icon"></i>
+
+                  <span>Contracts</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="contractlist.html">Contract List</a></li>
+                  <li><a href="empcontracthistory.html">Employee History</a></li>
+                  <li><a href="salarycomponenttype.html">Salary Types</a></li>
+                  <li><a href="salarycomponents.html">Salary Component</a></li>
+                </ul>
+              </li>
+              
+               <li class="sidebar-list">
+                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa-solid fa-user-shield stroke-icon"></i>
+                  <i class="fa-solid fa-user-shield fill-icon"></i>
+
+                  <span>Policies</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="payrollpolicies.html">Payroll Policies</a></li>
+                  <li><a href="attendancepolicies.html">Attendance Policies</a></li>
+                  <li><a href="overtimepolicies.html">Overtime Policies</a></li>
+                  <li><a href="taxpolicies.html">Tax Policies</a></li>
+                  <li><a href="taxbrackets.html">Tax Brackets</a></li>
+                  <li><a href="insurancepolicies.html">Iinsurance Policies</a></li>
+                </ul>
+              </li>
+
+              <li class="sidebar-list">
+               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                 <i class="fa-solid fa-sack-dollar stroke-icon"></i>
+                 <i class="fa-solid fa-sack-dollar fill-icon"></i>
+
+                 <span>Payroll</span></a>
+               <ul class="sidebar-submenu">
+                 <li><a href="payroll-cycles.html">Payroll Cycles</a></li>
+                 <li><a href="payroll-variables.html">Payroll Variables</a></li>
+                 <li><a href="payroll-records.html">Payroll Records</a></li>
+                 <li><a href="payroll-details.html">Payroll Details</a></li>
+                 <li><a href="payslips.html">Payslips</a></li>
+                 <li><a href="period.html">Periods</a></li>
+                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+               </ul>
+             </li>
+              
+             <li class="sidebar-list">
+               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                 <i class="fa-solid fa-hand-holding-dollar stroke-icon"></i>
+                 <i class="fa-solid fa-hand-holding-dollar fill-icon"></i>
+
+                 <span>Loans</span></a>
+               <ul class="sidebar-submenu">
+                 <li><a href="employee-loans.html"  >Employee Loans</a></li>
+                 <li><a href="employee-advances.html"  >Employee Advances</a></li>
+               </ul>
+             </li>
+             
+             <li class="sidebar-list">
+               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                 <i class="fa-solid fa-solid fa-file-export stroke-icon"></i>
+                 <i class="fa-solid fa-solid fa-file-export fill-icon"></i>
+
+                 <span>Payroll Exports</span></a>
+               <ul class="sidebar-submenu">
+                 <li><a href="payroll-exports.html"  >Payroll Exports</a></li>
+                 <li><a href="audit-logs.html"  >Audit Logs</a></li>
+               </ul>
+             </li>
+              
+            </ul>
+            <div class="right-arrow" id="right-arrow">
+              <i data-feather="arrow-right"></i>
             </div>
+          </div>
+        </nav>
+      </div>
             <!-- Page Sidebar Ends-->
             <div class="page-body">
                 <!-- Container-fluid starts-->
