@@ -773,7 +773,10 @@
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
                  <li><a href="period.html">Periods</a></li>
-                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                 <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                 <li><a href="snapshot_batches.html">Payroll Snapshot Batches</a></li>
+                 <li><a href="snapshot_employee_totals.html">Payroll Totals</a></li>
+                 <li><a href="payrollaggregates.html">Payroll Aggregates</a></li>
                </ul>
              </li>
               
@@ -864,11 +867,7 @@
           <!-- Status -->
           <div class="col-md-4">
             <label class="form-label">Status</label>
-            <select class="form-select" name="status">
-              <option value="open">Open</option>
-              <option value="closed">Closed</option>
-              <option value="locked">Locked</option>
-            </select>
+            <input type="text" class="form-control" name="status" disabled value="Open">
           </div>
 
           <!-- Closed At -->

@@ -39,11 +39,10 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/prism.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/fullcalender.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/jsgrid.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css" />
-    <!-- Data table css -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen" />
@@ -51,7 +50,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
 </head>
 
-<body>
+<body id="contractList">
     <!-- loader starts-->
     <div class="loader-wrapper">
         <div class="loader">
@@ -354,7 +353,8 @@
                                                                             <div class="common-space w-100">
                                                                                 <a class="f-w-500 f-12"
                                                                                     href="../template/private-chat.html">Robert
-                                                                                    D. Hambly</a>
+                                                                                    D.
+                                                                                    Hambly</a>
                                                                             </div>
                                                                         </div>
                                                                         <div>
@@ -379,13 +379,14 @@
                                                                             <div class="common-space w-100">
                                                                                 <a class="f-w-500 f-12"
                                                                                     href="../template/private-chat.html">Courtney
-                                                                                    C. Strang</a>
+                                                                                    C.
+                                                                                    Strang</a>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <span class="f-w-500 f-light f-12">Wishing
-                                                                                You a Happy Birthday
-                                                                                Dear..🥳🎊</span>
+                                                                                You a Happy Birthday Dear..
+                                                                                🥳🎊</span>
                                                                         </div>
                                                                     </div>
                                                                     <span class="f-light f-w-500 f-12">52 min</span>
@@ -458,7 +459,8 @@
                                                                     <div class="media-body">
                                                                         <a class="f-light f-w-500"
                                                                             href="../template/product.html">Furniture
-                                                                            Chair for Home</a>
+                                                                            Chair for
+                                                                            Home</a>
                                                                         <div class="qty-box">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-prepend">
@@ -496,7 +498,8 @@
                                                                     <div class="media-body">
                                                                         <a class="f-light f-w-500"
                                                                             href="../template/product.html">Men Cotton
-                                                                            Blend Blue T-Shirt</a>
+                                                                            Blend Blue
+                                                                            T-Shirt</a>
                                                                         <div class="qty-box">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-prepend">
@@ -613,79 +616,82 @@
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper" data-layout="stroke-svg">
-        <div class="logo-wrapper">
-          <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
-          <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
-          <div class="toggle-sidebar">
-            <i class="fa-solid fa-bars font-primary"></i>
-          </div>
-        </div>
-        <div class="logo-icon-wrapper w-100">
-          <a href="index.html">
-            <img class="img-fluid image-icon" src="../assets/images/logo/logo-icon.png" alt="Techsup Logo" />
-          </a>
-        </div>
-        <nav class="sidebar-main">
-          <div class="left-arrow" id="left-arrow">
-            <i class="fa-solid fa-arrow-left"></i>
-          </div>
-          <div id="sidebar-menu mt-5">
-            <ul class="sidebar-links pt-3" id="simple-bar">
-              <li class="back-btn">
-                <a href="index.html">
-                  <img class="img-fluid" src="../assets/images/logo/logo-icon.png" alt="Techsup Logo" />
-                </a>
-                <div class="mobile-back text-end">
-                  <span>Back </span>
-                  <i class="fa-solid fa-angle-right fs-2" aria-hidden="true"></i>
+                <div class="logo-wrapper">
+                    <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png"
+                            alt="Techsup Logo" /></a>
+                    <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
+                    <div class="toggle-sidebar">
+                        <i class="fa-solid fa-bars font-primary"></i>
+                    </div>
                 </div>
-              </li>
-              <li class="pin-title sidebar-main-title">
-                <div>
-                  <h6>Pinned</h6>
+                <div class="logo-icon-wrapper w-100">
+                    <a href="index.html">
+                        <img class="img-fluid image-icon" src="../assets/images/logo/logo-icon.png"
+                            alt="Techsup Logo" />
+                    </a>
                 </div>
-              </li>
-              <li class="sidebar-main-title">
-                <div>
-                  <h6 class="lan-1">General</h6>
-                </div>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"> </i>
-                <a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-regular fa-house stroke-icon"></i>
-                  <i class="fa-solid fa-house fill-icon"></i>
-                  <span class="lan-3">Dashboard </span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="index.html">Start</a></li>
-                  <li><a href="index-attendance.html">Attendance</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-briefcase stroke-icon"></i>
-                  <i class="fa-solid fa-briefcase fill-icon"></i>
+                <nav class="sidebar-main">
+                    <div class="left-arrow" id="left-arrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div id="sidebar-menu mt-5">
+                        <ul class="sidebar-links pt-3" id="simple-bar">
+                            <li class="back-btn">
+                                <a href="index.html">
+                                    <img class="img-fluid" src="../assets/images/logo/logo-icon.png"
+                                        alt="Techsup Logo" />
+                                </a>
+                                <div class="mobile-back text-end">
+                                    <span>Back </span>
+                                    <i class="fa-solid fa-angle-right fs-2" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="pin-title sidebar-main-title">
+                                <div>
+                                    <h6>Pinned</h6>
+                                </div>
+                            </li>
+                            <li class="sidebar-main-title">
+                                <div>
+                                    <h6 class="lan-1">General</h6>
+                                </div>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"> </i>
+                                <a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-regular fa-house stroke-icon"></i>
+                                    <i class="fa-solid fa-house fill-icon"></i>
+                                    <span class="lan-3">Dashboard </span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="index.html">Start</a></li>
+                                    <li><a href="index-attendance.html">Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-briefcase stroke-icon"></i>
+                                    <i class="fa-solid fa-briefcase fill-icon"></i>
 
-                  <span>Main Info</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="companise-list.html">Companise</a></li>
-                  <li><a href="branches-list.html">Branches</a></li>
-                  <li><a href="departments-list.html">Departments</a></li>
-                  <li><a href="jobtitles-list.html">Job Titles</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-users stroke-icon"></i>
-                  <i class="fa-solid fa-users fill-icon"></i>
+                                    <span>Main Info</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="companise-list.html">Companise</a></li>
+                                    <li><a href="branches-list.html">Branches</a></li>
+                                    <li><a href="departments-list.html">Departments</a></li>
+                                    <li><a href="jobtitles-list.html">Job Titles</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-users stroke-icon"></i>
+                                    <i class="fa-solid fa-users fill-icon"></i>
 
-                  <span>Employees</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="employee-list.html">Employee List</a></li>
-                  <li><a href="employeeassignments-list.html">Employee Assignments</a></li>
-                </ul>
-              </li>
-              <!-- <li class="sidebar-list">
+                                    <span>Employees</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="employee-list.html">Employee List</a></li>
+                                    <li><a href="employeeassignments-list.html">Employee Assignments</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="sidebar-list">
                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa-solid fa-users stroke-icon"></i>
                   <i class="fa-solid fa-users fill-icon"></i>
@@ -697,7 +703,7 @@
                   </li>
                 </ul>
               </li> -->
-              <!-- <li class="sidebar-list">
+                            <!-- <li class="sidebar-list">
                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa-solid fa-sitemap stroke-icon"></i>
                   <i class="fa-solid fa-sitemap fill-icon"></i>
@@ -706,7 +712,7 @@
                   <li><a href="Branches.html">Branches</a></li>
                 </ul>
               </li> -->
-              <!-- <li class="sidebar-list">
+                            <!-- <li class="sidebar-list">
                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa-solid fa-diagram-project stroke-icon"></i>
                   <i class="fa-solid fa-diagram-project fill-icon"></i>
@@ -716,341 +722,656 @@
                   <li><a href="Departments-attendance.html">Departments Attendance</a></li>
                 </ul>
               </li> -->
-             
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-tag fill-icon"></i>
-                  <i class="fa-solid fa-tag stroke-icon"></i>
-                  <span>Tags</span>
-                </a>
-                <ul class="sidebar-submenu">
-                  <li><a href="tags.html">Tags Start</a></li>
-                  <!-- <li><a href="projectcreate.html">Create new</a></li> -->
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-location-dot stroke-icon"></i>
 
-                  <i class="fa-solid fa-location-dot fill-icon"></i>
-                  <span>Location</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="location.html">Location Attendance</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title " href="#">
-                  <i class="fa-solid fa-clock-rotate-left stroke-icon"></i>
-                  <i class="fa-solid fa-clock-rotate-left fill-icon"></i>
-                  <span>Shifts</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="shifts.html">Shifts Attendance</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-regular fa-calendar-days stroke-icon"></i>
-                  <i class="fa-solid fa-calendar-days fill-icon"></i>
-                  <span>Holidays</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="holidays.html">Holidays Attendance</a></li>
-                </ul>
-              </li>
-               <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-clock stroke-icon"></i>
-                  <i class="fa-solid fa-clock fill-icon"></i>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-tag fill-icon"></i>
+                                    <i class="fa-solid fa-tag stroke-icon"></i>
+                                    <span>Tags</span>
+                                </a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="tags.html">Tags Start</a></li>
+                                    <!-- <li><a href="projectcreate.html">Create new</a></li> -->
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-location-dot stroke-icon"></i>
 
-                  <span>Attendance</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="attendancerecords.html">Attendance Records</a></li>
-                  <li><a href="attendancesummaries.html">Attendance Summaries</a></li>
-                  <li><a href="leavetypes.html">Leave Types</a></li>
-                  <li><a href="leavebalances.html">Leave Balances</a></li>
-                  <li><a href="leaverequests.html">Leave Requests</a></li>
-                  <li><a href="empleave.html">Employee Leaves</a></li>
-                  <li><a href="attperiod.html">Periods</a></li>
-                  <li><a href="attperiodclosure.html">Period Closures</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-regular fa-chart-bar stroke-icon"></i>
-                  <i class="fa-solid fa-chart-bar fill-icon"></i>
-                  <span>Reports</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="reports.html">Reports Attendance</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-sliders stroke-icon"></i>
-                  <i class="fa-solid fa-sliders fill-icon"></i>
+                                    <i class="fa-solid fa-location-dot fill-icon"></i>
+                                    <span>Location</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="location.html">Location Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title " href="#">
+                                    <i class="fa-solid fa-clock-rotate-left stroke-icon"></i>
+                                    <i class="fa-solid fa-clock-rotate-left fill-icon"></i>
+                                    <span>Shifts</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="shifts.html">Shifts Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-regular fa-calendar-days stroke-icon"></i>
+                                    <i class="fa-solid fa-calendar-days fill-icon"></i>
+                                    <span>Holidays</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="holidays.html">Holidays Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-clock stroke-icon"></i>
+                                    <i class="fa-solid fa-clock fill-icon"></i>
 
-                  <span>Setting</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="setting.html">Setting</a></li>
-                  <li><a href="org-setting.html">Organization Setting</a></li>
-                </ul>
-              </li>
-              <li class="sidebar-main-title">
-                <div>
-                  <h6>Payroll</h6>
-                </div>
-              </li>
-              
-              
-              <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-file stroke-icon"></i>
-                  <i class="fa-solid fa-file fill-icon"></i>
+                                    <span>Attendance</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="attendancerecords.html">Attendance Records</a></li>
+                                    <li><a href="attendancesummaries.html">Attendance Summaries</a></li>
+                                    <li><a href="leavetypes.html">Leave Types</a></li>
+                                    <li><a href="leavebalances.html">Leave Balances</a></li>
+                                    <li><a href="leaverequests.html">Leave Requests</a></li>
+                                    <li><a href="empleave.html">Employee Leaves</a></li>
+                                    <li><a href="attperiod.html">Periods</a></li>
+                                    <li><a href="attperiodclosure.html">Period Closures</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-regular fa-chart-bar stroke-icon"></i>
+                                    <i class="fa-solid fa-chart-bar fill-icon"></i>
+                                    <span>Reports</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="reports.html">Reports Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-sliders stroke-icon"></i>
+                                    <i class="fa-solid fa-sliders fill-icon"></i>
 
-                  <span>Contracts</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="contractlist.html">Contract List</a></li>
-                  <li><a href="empcontracthistory.html">Employee History</a></li>
-                  <li><a href="salarycomponenttype.html">Salary Types</a></li>
-                  <li><a href="salarycomponents.html">Salary Component</a></li>
-                </ul>
-              </li>
-              
-               <li class="sidebar-list">
-                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa-solid fa-user-shield stroke-icon"></i>
-                  <i class="fa-solid fa-user-shield fill-icon"></i>
+                                    <span>Setting</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="setting.html">Setting</a></li>
+                                    <li><a href="org-setting.html">Organization Setting</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-main-title">
+                                <div>
+                                    <h6>Payroll</h6>
+                                </div>
+                            </li>
 
-                  <span>Policies</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="payrollpolicies.html">Payroll Policies</a></li>
-                  <li><a href="attendancepolicies.html">Attendance Policies</a></li>
-                  <li><a href="overtimepolicies.html">Overtime Policies</a></li>
-                  <li><a href="taxpolicies.html">Tax Policies</a></li>
-                  <li><a href="taxbrackets.html">Tax Brackets</a></li>
-                  <li><a href="insurancepolicies.html">Iinsurance Policies</a></li>
-                </ul>
-              </li>
 
-              <li class="sidebar-list">
-               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                 <i class="fa-solid fa-sack-dollar stroke-icon"></i>
-                 <i class="fa-solid fa-sack-dollar fill-icon"></i>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-file stroke-icon"></i>
+                                    <i class="fa-solid fa-file fill-icon"></i>
 
-                 <span>Payroll</span></a>
-               <ul class="sidebar-submenu">
-                 <li><a href="payroll-cycles.html">Payroll Cycles</a></li>
-                 <li><a href="payroll-variables.html">Payroll Variables</a></li>
-                 <li><a href="payroll-records.html">Payroll Records</a></li>
-                 <li><a href="payroll-details.html">Payroll Details</a></li>
-                 <li><a href="payslips.html">Payslips</a></li>
-                 <li><a href="period.html">Periods</a></li>
-                 <li><a href="payperiodclosures.html">Payroll Closure</a></li>
-                 <li><a href="snapshot_batches.html">Payroll Snapshot Batches</a></li>
-                 <li><a href="snapshot_employee_totals.html">Payroll Totals</a></li>
-                 <li><a href="payrollaggregates.html">Payroll Aggregates</a></li>
-               </ul>
-             </li>
-              
-             <li class="sidebar-list">
-               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                 <i class="fa-solid fa-hand-holding-dollar stroke-icon"></i>
-                 <i class="fa-solid fa-hand-holding-dollar fill-icon"></i>
+                                    <span>Contracts</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="contractlist.html">Contract List</a></li>
+                                    <li><a href="empcontracthistory.html">Employee History</a></li>
+                                    <li><a href="salarycomponenttype.html">Salary Types</a></li>
+                                    <li><a href="salarycomponents.html">Salary Component</a></li>
+                                </ul>
+                            </li>
 
-                 <span>Loans</span></a>
-               <ul class="sidebar-submenu">
-                 <li><a href="employee-loans.html"  >Employee Loans</a></li>
-                 <li><a href="employee-advances.html"  >Employee Advances</a></li>
-               </ul>
-             </li>
-             
-             <li class="sidebar-list">
-               <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                 <i class="fa-solid fa-solid fa-file-export stroke-icon"></i>
-                 <i class="fa-solid fa-solid fa-file-export fill-icon"></i>
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-user-shield stroke-icon"></i>
+                                    <i class="fa-solid fa-user-shield fill-icon"></i>
 
-                 <span>Payroll Exports</span></a>
-               <ul class="sidebar-submenu">
-                 <li><a href="payroll-exports.html"  >Payroll Exports</a></li>
-                 <li><a href="audit-logs.html"  >Audit Logs</a></li>
-               </ul>
-             </li>
-              
-            </ul>
-            <div class="right-arrow" id="right-arrow">
-              <i data-feather="arrow-right"></i>
+                                    <span>Policies</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="payrollpolicies.html">Payroll Policies</a></li>
+                                    <li><a href="attendancepolicies.html">Attendance Policies</a></li>
+                                    <li><a href="overtimepolicies.html">Overtime Policies</a></li>
+                                    <li><a href="taxpolicies.html">Tax Policies</a></li>
+                                    <li><a href="taxbrackets.html">Tax Brackets</a></li>
+                                    <li><a href="insurancepolicies.html">Iinsurance Policies</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-sack-dollar stroke-icon"></i>
+                                    <i class="fa-solid fa-sack-dollar fill-icon"></i>
+
+                                    <span>Payroll</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="payroll-cycles.html">Payroll Cycles</a></li>
+                                    <li><a href="payroll-variables.html">Payroll Variables</a></li>
+                                    <li><a href="payroll-records.html">Payroll Records</a></li>
+                                    <li><a href="payroll-details.html">Payroll Details</a></li>
+                                    <li><a href="payslips.html">Payslips</a></li>
+                                    <li><a href="period.html">Periods</a></li>
+                                    <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                                    <li><a href="snapshot_batches.html">Payroll Snapshot Batches</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-hand-holding-dollar stroke-icon"></i>
+                                    <i class="fa-solid fa-hand-holding-dollar fill-icon"></i>
+
+                                    <span>Loans</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="employee-loans.html">Employee Loans</a></li>
+                                    <li><a href="employee-advances.html">Employee Advances</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="sidebar-list">
+                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                                    <i class="fa-solid fa-solid fa-file-export stroke-icon"></i>
+                                    <i class="fa-solid fa-solid fa-file-export fill-icon"></i>
+
+                                    <span>Payroll Exports</span></a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="payroll-exports.html">Payroll Exports</a></li>
+                                    <li><a href="audit-logs.html">Audit Logs</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <div class="right-arrow" id="right-arrow">
+                            <i data-feather="arrow-right"></i>
+                        </div>
+                    </div>
+                </nav>
             </div>
-          </div>
-        </nav>
-      </div>
             <!-- Page Sidebar Ends-->
+
             <div class="page-body">
+
                 <!-- Container-fluid starts-->
-                <div class="container-fluid mt-5">
-                    <div class="card p-3">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="mb-0">Leaves</h4>
-                             <div class="d-flex gap-2">
-                                <button class="btn btn-outline-secondary">
-                                    Export<i class="fa fa-upload ms-1"></i>
-                                </button>
+                <div class="container-fluid my-5">
+                    <div class="card shadow-lg border-0 rounded-4 p-3">
+                        <!-- Header -->
+                        <div class="p-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h4 class="mb-0">Snapshot Employee Totals</h4>
+                            </div>
+
+                            <!-- Filters -->
+                            <div class="d-flex gap-2">
+
+                                <select class="form-select">
+                                    <option>January 2026</option>
+                                    <option>February 2026</option>
+                                </select>
+
+                                <select class="form-select">
+                                    <option>All Branches</option>
+                                    <option>HQ</option>
+                                    <option>Factory</option>
+                                </select>
+
                             </div>
                         </div>
 
-                        <div class="d-flex flex-wrap gap-2 mb-3 align-items-center">
-                            <div class="date-navigator">
-                                <button class="nav-btn" id="prevDay">
-                                    <i class="fa fa-chevron-left"></i>
-                                </button>
-                                <span id="dayDate"></span>
-                                <button class="nav-btn" id="nextDay">
-                                    <i class="fa fa-chevron-right"></i>
-                                </button>
-                            </div>
-
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                                    <i class="fa fa-filter me-1"></i> Filters
-                                </button>
-                                <ul class="dropdown-menu p-3" style="min-width: 250px">
-                                    <li>
-                                        <label>
-                                            <input type="checkbox" class="filter-earlylate-col" data-col="5" checked />
-                                            Department
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox" class="filter-earlylate-col" data-col="3" checked />
-                                            Tags
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                                    Display
-                                </button>
-
-                                <ul class="dropdown-menu p-3"
-                                    style="min-width: 260px; max-height: 400px; overflow: auto">
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="0" checked />
-                                            Employee</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="1" checked />
-                                            Employee ID</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="2" checked />
-                                            Department</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="3" checked />
-                                            Tags</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="4" checked />
-                                            Date of Request Creation</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="5" checked />
-                                            Type</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="6" checked />
-                                            Rejection Reason</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="7" checked />
-                                            From</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="8" checked />
-                                            To</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="9" checked />
-                                            Status</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="10" checked />
-                                            Total Days</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="checkbox" class="toggle-leaves-col" data-col="11" checked />
-                                            Attachments</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        <!-- Table -->
                         <div class="table-responsive">
-                            <table id="leavesTable" class="table table-hover align-middle w-100">
+                            <table class="table table-hover align-middle mb-0">
+
                                 <thead class="table-light">
                                     <tr>
-                                        <th>Emplyee</th>
-                                        <th>Employee ID</th>
+                                        <th>ID</th>
+                                        <th>Employee</th>
+                                        <th>Branch</th>
                                         <th>Department</th>
-                                        <th>Tags</th>
-                                        <th>Date of Request Creation</th>
-                                        <th>Type</th>
-                                        <th>Rejection Reason</th>
-                                        <th>From</th>
-                                        <th>To</th>
-                                        <th>Status</th>
-                                        <th>Total Days</th>
-                                        <th>Attachments</th>
+                                        <th>Category</th>
+                                        <th>Gross</th>
+                                        <th>Allowances</th>
+                                        <th>Deductions</th>
+                                        <th>Insurance</th>
+                                        <th>Tax</th>
+                                        <th>Net Salary</th>
+                                        <th>Currency</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
+
                                     <tr>
-                                       <td>Mohammed Hatem</td>
-                                       <td>98</td>
-                                       <td>Frontend</td>
-                                       <td><span class="badge badge-light-danger">Test</span></td>
-                                       <td>2026-02-16</td>
-                                       <td>Ordinary</td>
-                                       <td>-</td>
-                                       <td>2026-02-16</td>
-                                       <td>2026-02-17</td>
-                                       <td>PENDING</td>
-                                       <td>2</td>
-                                       <td><div class="d-flex justify-content-center gap-1" style="width: fit-content;"><a href="#"><i class="fas fa-eye p-2"></i></a> <a href="#"><i class="fas fa-download p-2"></i></a></div></td>
+                                        <td>1</td>
+                                        <td>Ahmed Mohamed</td>
+                                        <td>HQ</td>
+                                        <td>IT</td>
+                                        <td>Full-Time</td>
+                                        <td>10,000</td>
+                                        <td class="text-success">+2,000</td>
+                                        <td class="text-danger">-1,000</td>
+                                        <td>-500</td>
+                                        <td>-800</td>
+                                        <td class="fw-bold text-primary">9,700</td>
+                                        <td><img src="../assets/images/Saudi_Riyal_Symbol.png" alt="saudi riyal"
+                                                width="15px"></td>
+                                        <td><button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                                data-bs-target="#payrollBreakdownModal">
+                                                View
+                                            </button></td>
                                     </tr>
+
                                     <tr>
-                                       <td>Mohammed Hatem</td>
-                                       <td>98</td>
-                                       <td>Frontend</td>
-                                       <td><span class="badge badge-light-danger">Test</span></td>
-                                       <td>2026-02-16</td>
-                                       <td>Ordinary</td>
-                                       <td>-</td>
-                                       <td>2026-02-16</td>
-                                       <td>2026-02-17</td>
-                                       <td>PENDING</td>
-                                       <td>2</td>
-                                       <td><div class="d-flex justify-content-center gap-1" style="width: fit-content;"><a href="#"><i class="fas fa-eye p-2"></i></a> <a href="#"><i class="fas fa-download p-2"></i></a></div></td>
+                                        <td>2</td>
+                                        <td>Omar Ali</td>
+                                        <td>Factory</td>
+                                        <td>Operations</td>
+                                        <td>Contract</td>
+                                        <td>7,000</td>
+                                        <td class="text-success">+1,000</td>
+                                        <td class="text-danger">-500</td>
+                                        <td>-300</td>
+                                        <td>-400</td>
+                                        <td class="fw-bold text-primary">6,800</td>
+                                        <td><img src="../assets/images/Saudi_Riyal_Symbol.png" alt="saudi riyal"
+                                                width="15px"></td>
+                                        <td><button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                                data-bs-target="#payrollBreakdownModal">
+                                                View
+                                            </button></td>
                                     </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Sara Hassan</td>
+                                        <td>HQ</td>
+                                        <td>HR</td>
+                                        <td>Part-Time</td>
+                                        <td>5,000</td>
+                                        <td class="text-success">+800</td>
+                                        <td class="text-danger">-200</td>
+                                        <td>-150</td>
+                                        <td>-250</td>
+                                        <td class="fw-bold text-primary">5,200</td>
+                                        <td><img src="../assets/images/Saudi_Riyal_Symbol.png" alt="saudi riyal"
+                                                width="15px"></td>
+                                        <td><button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                                data-bs-target="#payrollBreakdownModal">
+                                                View
+                                            </button></td>
+                                    </tr>
+
                                 </tbody>
+
                             </table>
+                        </div>
+                        <div class="row text-center p-3 mt-5">
+                            <div class="col-md-3">
+                                <h6>Total Gross</h6>
+                                <h5>22,000 <img src="../assets/images/Saudi_Riyal_Symbol.png" alt="saudi riyal"
+                                        width="15px"></h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>Total Allowances</h6>
+                                <h5 class="text-success">3,800 <img src="../assets/images/Saudi_Riyal_Symbol.png"
+                                        alt="saudi riyal" width="15px"></h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>Total Deductions</h6>
+                                <h5 class="text-danger">1,700 <img src="../assets/images/Saudi_Riyal_Symbol.png"
+                                        alt="saudi riyal" width="15px"></h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>Total Net</h6>
+                                <h5 class="text-primary">21,700 <img src="../assets/images/Saudi_Riyal_Symbol.png"
+                                        alt="saudi riyal" width="15px"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="payrollBreakdownModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content rounded-4 border-0 shadow">
+
+                            <div class="modal-header border-bottom-0 pb-0">
+                                <h5 class="modal-title fw-bold">Payslip Breakdown</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="row g-2 mb-4 align-items-end">
+                                    <div class="col-sm-4 col-12">
+                                        <label class="form-label small fw-bold">Period</label>
+                                        <select class="form-select form-select-sm" id="periodFilter">
+                                            <option value="2025-01">2025-01</option>
+                                            <option value="2025-02">2025-02</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4 col-12">
+                                        <label class="form-label small fw-bold">Payslip</label>
+                                        <select class="form-select form-select-sm" id="payslipFilter">
+                                            <option value="PS-02545">PS-02545</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2 col-6">
+                                        <label class="form-label small fw-bold">Status</label>
+                                        <select class="form-select form-select-sm" id="statusFilter">
+                                            <option value="published">Published</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2 col-6">
+                                        <button class="btn btn-primary btn-sm w-100">Apply</button>
+                                    </div>
+                                </div>
+
+                                <div id="payslip">
+
+
+
+                                    <div
+                                        style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 10px rgba(0,0,0,0.1)">
+
+
+
+                                        <div class="text-white p-4 text-center"
+                                            style="background:linear-gradient(90deg,#0f5132,#198754);">
+
+                                            <div class="logos d-flex justify-content-between ">
+
+                                                <img src="../assets/images/logo/logo_dark.png" alt="Tamam Logo"
+                                                    width="80px">
+
+                                                <img src="../assets/images/logo/logo.png" alt="Company logo"
+                                                    width="80px">
+
+                                            </div>
+
+                                            <hr>
+
+                                            <h2 class="text-white" style="margin:0">Employee Payslip</h2>
+
+                                        </div>
+
+
+
+                                        <div class="d-flex justify-content-between">
+
+                                            <div class="d-flex align-items-center gap-3 p-4">
+
+                                                <div class="d-flex justify-content-center p-0 avatar rounded-circle overflow-hidden w-auto border border-4 border-primary"
+                                                    style="max-width: 80px;">
+
+                                                    <img class="p-2" src="../assets/images/avtar/avatar.jpg"
+                                                        width="100%" height="auto" alt="Emp Avatar">
+
+                                                </div>
+
+                                                <div class="emp">
+
+                                                    <h3 style="margin-bottom:5px">Ahmed Faisal</h3>
+
+                                                    <span class="text-muted">EMP-00015</span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="p-4">
+
+                                                <h5>Period : <strong>2025-1</strong> | PS-2025-01</h5>
+
+                                                <span class="badge bg-primary">Published</span>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                        <div class="row g-3 p-4 pt-0 d-flex justify-content-center">
+
+
+
+                                            <div class="col-6">
+
+                                                <div class="p-3 rounded-3 bg-light text-dark h-100 shadow-sm border">
+
+                                                    <h5 class="mb-3 fw-bold border-bottom pb-2">Employee Information
+                                                    </h5>
+
+                                                    <p class="mb-1 text-muted">Job: <span
+                                                            class="text-dark fw-medium">Accountant</span></p>
+
+                                                    <p class="mb-1 text-muted">Branch: <span
+                                                            class="text-dark fw-medium">Main Branch</span></p>
+
+                                                    <p class="mb-1 text-muted">Department: <span
+                                                            class="text-dark fw-medium">Finance</span></p>
+
+                                                    <p class="mb-0 text-muted">Category: <span
+                                                            class="text-dark fw-medium">Permanent</span></p>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="col-6">
+
+                                                <div class="p-3 rounded-3 bg-light text-dark h-100 shadow-sm border">
+
+                                                    <h5 class="mb-3 fw-bold border-bottom pb-2">Payroll Period</h5>
+
+                                                    <p class="mb-1 text-muted">Period: <span
+                                                            class="text-dark fw-medium">2024-12-26 → 2025-01-25</span>
+                                                    </p>
+
+                                                    <p class="mb-1 text-muted">Payment Date: <span
+                                                            class="text-dark fw-medium">Jan 30, 2025</span></p>
+
+                                                    <p class="mb-0 text-muted">Currency: <span
+                                                            class="text-dark fw-medium">SAR</span></p>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                        <div class="row g-3 px-4 pb-4">
+
+
+
+                                            <div class="col-md-6">
+
+                                                <div class="card h-100 border-0 shadow-sm border">
+
+                                                    <div class="card-header bg-white fw-bold py-3">
+
+                                                        Earnings
+
+                                                    </div>
+
+                                                    <div class="card-body p-0">
+
+                                                        <table class="table table-borderless mb-0">
+
+                                                            <tbody class="align-middle">
+
+                                                                <tr class="px-3">
+
+                                                                    <td class="ps-3">Basic Salary</td>
+
+                                                                    <td class="text-end pe-3">8,000</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td class="ps-3">Housing</td>
+
+                                                                    <td class="text-end pe-3">2,000</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td class="ps-3">Transport</td>
+
+                                                                    <td class="text-end pe-3">1,000</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td class="ps-3">Overtime</td>
+
+                                                                    <td class="text-end pe-3">500</td>
+
+                                                                </tr>
+
+                                                            </tbody>
+
+                                                            <tfoot>
+
+                                                                <tr class="fw-bold border-top">
+
+                                                                    <td class="ps-3 py-3">Subtotal</td>
+
+                                                                    <td class="text-end pe-3 py-3">11,500</td>
+
+                                                                </tr>
+
+                                                            </tfoot>
+
+                                                        </table>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="col-md-6">
+
+                                                <div class="card h-100 border-0 shadow-sm border">
+
+                                                    <div class="card-header bg-white fw-bold py-3">
+
+                                                        Deductions
+
+                                                    </div>
+
+                                                    <div class="card-body p-0">
+
+                                                        <table class="table table-borderless mb-0">
+
+                                                            <tbody class="align-middle">
+
+                                                                <tr>
+
+                                                                    <td class="ps-3">Absence</td>
+
+                                                                    <td class="text-end pe-3">250</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td class="ps-3">Tax</td>
+
+                                                                    <td class="text-end pe-3">300</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td class="ps-3">Insurance</td>
+
+                                                                    <td class="text-end pe-3">150</td>
+
+                                                                </tr>
+
+                                                            </tbody>
+
+                                                            <tfoot>
+
+                                                                <tr class="fw-bold border-top">
+
+                                                                    <td class="ps-3 py-3 text-danger">Subtotal</td>
+
+                                                                    <td class="text-end pe-3 py-3 text-danger">700</td>
+
+                                                                </tr>
+
+                                                            </tfoot>
+
+                                                        </table>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                        <div style="padding:20px">
+
+                                            <div
+                                                class="bg-primary text-white p-3 rounded-2 d-flex justify-content-between">
+
+                                                <strong>Net Salary</strong>
+
+                                                <strong>SAR 10,800</strong>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-light">
+                                <button class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
+                                <button class="btn btn-primary px-4" onclick="downloadPayslip()">
+                                    <i class="fa-solid fa-file-pdf me-2"></i> Export PDF
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-                <!-- Container-fluid Ends-->
+                <!-- footer start-->
             </div>
-            <!-- footer start-->
-        </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 footer-copyright text-center">
-                        <p class="mb-0">Copyright 2026 © Techsup Tamam</p>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 footer-copyright text-center">
+                            <p class="mb-0">Copyright 2026 © Techsup Tamam</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
 
     <!-- latest jquery-->
@@ -1068,35 +1389,48 @@
     <!-- Plugins JS start-->
     <script src="../assets/js/sidebar-menu.js"></script>
     <script src="../assets/js/sidebar-pin.js"></script>
-    <script src="../assets/js/slick/slick.min.js"></script>
-    <script src="../assets/js/slick/slick.js"></script>
-    <script src="../assets/js/header-slick.js"></script>
-    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
-    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
-    <!-- Range Slider js-->
-    <script src="../assets/js/range-slider/rSlider.min.js"></script>
-    <script src="../assets/js/rangeslider/rangeslider.js"></script>
-    <script src="../assets/js/prism/prism.min.js"></script>
-    <script src="../assets/js/clipboard/clipboard.min.js"></script>
-    <script src="../assets/js/counter/jquery.waypoints.min.js"></script>
-    <script src="../assets/js/counter/jquery.counterup.min.js"></script>
-    <script src="../assets/js/counter/counter-custom.js"></script>
-    <script src="../assets/js/custom-card/custom-card.js"></script>
-    <!-- calendar js-->
-    <script src="../assets/js/calendar/fullcalender.js"></script>
-    <script src="../assets/js/calendar/custom-calendar.js"></script>
-    <script src="../assets/js/dashboard/dashboard_2.js"></script>
     <script src="../assets/js/animation/wow/wow.min.js"></script>
-    <!-- Plugins JS Ends-->
-    <!-- DataTables -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../assets/js/jsgrid/jsgrid.min.js"></script>
+    <script src="../assets/js/jsgrid/griddata.js"></script>
+    <script src="../assets/js/jsgrid/jsgrid.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
     <!--script(src='../assets/js/theme-customizer/customizer.js')-->
     <script>
         new WOW().init();
+    </script>
+    <script>
+        document.body.classList.add("printing");
+
+        function downloadPayslip() {
+
+            const element = document.getElementById("payslip");
+
+
+
+            const opt = {
+
+                margin: 5,
+
+                filename: 'payslip.pdf',
+
+                image: { type: 'jpeg', quality: 0.98 },
+
+                html2canvas: { scale: 2, useCORS: true },
+
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+
+            };
+
+
+
+            html2pdf().set(opt).from(element).save();
+
+        }
     </script>
 </body>
 

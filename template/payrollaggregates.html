@@ -542,7 +542,7 @@
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
-     <div class="sidebar-wrapper" data-layout="stroke-svg">
+    <div class="sidebar-wrapper" data-layout="stroke-svg">
         <div class="logo-wrapper">
           <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
           <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
@@ -819,112 +819,157 @@
         <div class="container-fluid my-5">
   <div class="card shadow-lg border-0 rounded-4 p-3">
 
-      <div class="d-flex attendance-header justify-content-between align-items-center my-3">
-                            <h4 class="mb-0">Branches</h4>
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>Payroll Snapshot Aggregates</h4>
 
-                            <div class="d-flex gap-2">
-                                <a href="add-branch.html" class="btn btn-outline-secondary">
-                                    New Branch<i class="fa fa-add ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-outline-secondary btn-sm">Export Excel</button>
+      <button class="btn btn-primary btn-sm">Refresh</button>
+    </div>
+  </div>
 
+  <!-- Filters -->
+  <div class="card shadow-sm rounded-3 p-3 mb-3">
+    <div class="row g-3">
 
-    <!-- Table -->
+      <div class="col-md-3">
+        <label class="form-label">Snapshot Batch</label>
+        <select class="form-select">
+          <option>SNAP-001</option>
+          <option>SNAP-002</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Aggregate Type</label>
+        <select class="form-select">
+          <option value="branch">By Branch</option>
+          <option value="department">By Department</option>
+          <option value="category">By Category</option>
+          <option value="company">Company Total</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Currency</label>
+        <select class="form-select">
+          <option>EGP</option>
+          <option>SAR</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 d-flex align-items-end">
+        <button class="btn btn-primary w-100">Apply</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="row g-3 text-center mb-3">
+
+    <div class="col-6 col-md-2">
+      <div class="p-3 border rounded-3 bg-light">
+        <h6>Total Employees</h6>
+        <h5>120</h5>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="p-3 border rounded-3 bg-light">
+        <h6>Gross</h6>
+        <h5>1,200,000</h5>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="p-3 border rounded-3 bg-light">
+        <h6>Allowances</h6>
+        <h5 class="text-success">150,000</h5>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="p-3 border rounded-3 bg-light">
+        <h6>Deductions</h6>
+        <h5 class="text-danger">80,000</h5>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="p-3 border rounded-3 bg-light">
+        <h6>Tax</h6>
+        <h5>60,000</h5>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="p-3 border rounded-3 bg-light">
+        <h6>Net</h6>
+        <h5 class="text-primary">1,210,000</h5>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Table -->
+  <div class="card shadow-sm rounded-3">
     <div class="table-responsive">
+
       <table class="table table-hover align-middle mb-0">
 
         <thead class="table-light">
           <tr>
             <th>ID</th>
-            <th>Company</th>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Status</th>
-            <th class="text-center">Actions</th>
+            <th>Type</th>
+            <th>Employees</th>
+            <th>Gross</th>
+            <th>Allowances</th>
+            <th>Deductions</th>
+            <th>Insurance</th>
+            <th>Tax</th>
+            <th>Net</th>
+            <th>Currency</th>
           </tr>
         </thead>
 
         <tbody>
 
-          <!-- Row 1 -->
           <tr>
             <td>1</td>
-            <td>Company 1</td>
-            <td>Main Branch</td>
-            <td><span class="badge bg-dark">MBR-001</span></td>
-            <td><span class="badge bg-success">Active</span></td>
-
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                  <li><a class="dropdown-item"><i class="fa-solid fa-eye text-primary me-2"></i> View</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-pen text-warning me-2"></i> Edit</a></li>
-                  <li><hr></li>
-                  <li><a class="dropdown-item text-danger"><i class="fa-solid fa-trash me-2"></i> Delete</a></li>
-                </ul>
-              </div>
-            </td>
+            <td>HQ Branch</td>
+            <td>50</td>
+            <td>500,000</td>
+            <td class="text-success">+70,000</td>
+            <td class="text-danger">-30,000</td>
+            <td>20,000</td>
+            <td>25,000</td>
+            <td class="fw-bold text-primary">515,000</td>
+            <td>EGP</td>
           </tr>
 
-          <!-- Row 2 -->
           <tr>
             <td>2</td>
-            <td>Company 1</td>
-            <td>Alex Branch</td>
-            <td><span class="badge bg-dark">ALX-002</span></td>
-            <td><span class="badge bg-success">Active</span></td>
-
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                  <li><a class="dropdown-item"><i class="fa-solid fa-eye text-primary me-2"></i> View</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-pen text-warning me-2"></i> Edit</a></li>
-                  <li><hr></li>
-                  <li><a class="dropdown-item text-danger"><i class="fa-solid fa-trash me-2"></i> Delete</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr>
-
-          <!-- Row 3 -->
-          <tr>
-            <td>3</td>
-            <td>Company 2</td>
-            <td>Cairo Branch</td>
-            <td><span class="badge bg-dark">CAI-003</span></td>
-            <td><span class="badge bg-secondary">Inactive</span></td>
-
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                  <li><a class="dropdown-item"><i class="fa-solid fa-eye text-primary me-2"></i> View</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-pen text-warning me-2"></i> Edit</a></li>
-                  <li><hr></li>
-                  <li><a class="dropdown-item text-danger"><i class="fa-solid fa-trash me-2"></i> Delete</a></li>
-                </ul>
-              </div>
-            </td>
+            <td>Factory</td>
+            <td>70</td>
+            <td>700,000</td>
+            <td class="text-success">+80,000</td>
+            <td class="text-danger">-50,000</td>
+            <td>40,000</td>
+            <td>35,000</td>
+            <td class="fw-bold text-primary">695,000</td>
+            <td><img src="../assets/images/Saudi_Riyal_Symbol.png" width="15px" alt="Saudi Riyal Symbol"></td>
           </tr>
 
         </tbody>
 
       </table>
-    </div>
 
+    </div>
   </div>
+
+</div>
 </div>
 
         <!-- footer start-->
