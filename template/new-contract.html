@@ -767,8 +767,8 @@
 
                  <span>Payroll</span></a>
                <ul class="sidebar-submenu">
-                 <li><a href="payroll-cycles.html">Payroll Cycles</a></li>
-                 <li><a href="payroll-variables.html">Payroll Variables</a></li>
+                 <!-- <li><a href="payroll-cycles.html">Payroll Cycles</a></li> -->
+                 <!-- <li><a href="payroll-variables.html">Payroll Variables</a></li> -->
                  <li><a href="payroll-records.html">Payroll Records</a></li>
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
@@ -910,16 +910,6 @@
                   </div>
 
                   <div class="col-md-4">
-                    <label class="form-label">Daily Rate</label>
-                    <input type="number" class="form-control" name="daily">
-                  </div>
-
-                  <div class="col-md-4">
-                    <label class="form-label">Hourly Rate</label>
-                    <input type="number" class="form-control" name="hourly">
-                  </div>
-
-                  <div class="col-md-4">
                     <label class="form-label">Working Hours</label>
                     <input type="text" class="form-control" name="workingHours">
                   </div>
@@ -927,6 +917,16 @@
                   <div class="col-md-4">
                     <label class="form-label">Working Days</label>
                     <input type="text" class="form-control" name="workingDays">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label">Daily Rate</label>
+                    <input type="number" class="form-control" name="daily" readonly disabled>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label">Hourly Rate</label>
+                    <input type="number" class="form-control" name="hourly" readonly disabled>
                   </div>
 
                   <div class="col-md-4">

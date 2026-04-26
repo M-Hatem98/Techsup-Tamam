@@ -542,7 +542,7 @@
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
- <div class="sidebar-wrapper" data-layout="stroke-svg">
+     <div class="sidebar-wrapper" data-layout="stroke-svg">
         <div class="logo-wrapper">
           <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="Techsup Logo" /></a>
           <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
@@ -767,13 +767,16 @@
 
                  <span>Payroll</span></a>
                <ul class="sidebar-submenu">
-                 <li><a href="payroll-cycles.html">Payroll Cycles</a></li>
-                 <li><a href="payroll-variables.html">Payroll Variables</a></li>
+                 <!-- <li><a href="payroll-cycles.html">Payroll Cycles</a></li> -->
+                 <!-- <li><a href="payroll-variables.html">Payroll Variables</a></li> -->
                  <li><a href="payroll-records.html">Payroll Records</a></li>
                  <li><a href="payroll-details.html">Payroll Details</a></li>
                  <li><a href="payslips.html">Payslips</a></li>
                  <li><a href="period.html">Periods</a></li>
                  <li><a href="payperiodclosures.html">Payroll Closure</a></li>
+                 <li><a href="snapshot_batches.html">Payroll Snapshot Batches</a></li>
+                 <li><a href="snapshot_employee_totals.html">Payroll Totals</a></li>
+                 <li><a href="payrollaggregates.html">Payroll Aggregates</a></li>
                </ul>
              </li>
               
@@ -809,103 +812,430 @@
         </nav>
       </div>
       <!-- Page Sidebar Ends-->
-     
+
       <div class="page-body">
 
         <!-- Container-fluid starts-->
         <div class="container-fluid my-5">
-  <div class="card shadow-lg border-0 rounded-4 p-3">
+          <div class="card shadow-lg border-0 rounded-4 p-3">
 
-      <div class="d-flex attendance-header justify-content-between align-items-center my-3">
-                            <h4 class="mb-0">Payslips</h4>
+            <div class="d-flex attendance-header justify-content-between align-items-center my-3">
+              <h4 class="mb-0">Payslips</h4>
 
-                            <div class="d-flex gap-2">
-                                <a href="add-payslip.html" class="btn btn-outline-secondary">
-                                    New Payslips<i class="fa fa-add ms-1"></i>
-                                </a>
-                            </div>
+              <div class="d-flex gap-2">
+                <a href="add-payslip.html" class="btn btn-outline-secondary">
+                  New Payslips<i class="fa fa-add ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+
+                <thead class="table-light">
+                  <tr>
+                    <th>ID</th>
+                    <th>Payslip No</th>
+                    <th>Payroll Record</th>
+                    <th>Generated At</th>
+                    <th>File Path</th>
+                    <th>Published To</th>
+                    <th class="text-center">Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <!-- Row 1 -->
+                  <tr>
+                    <td>1</td>
+                    <td>PS-2026-001</td>
+                    <td>PR-001</td>
+                    <td>01 Feb 2026</td>
+                    <td>
+                      <a href="#" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal"
+                        data-bs-target="#payrollBreakdownModal">
+                        <i class="fa-solid fa-file-pdf"></i> View
+                      </a>
+                    </td>
+                    <td><span class="badge bg-success">Published</span></td>
+
+                    <td class="text-center">
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item"><i class="fa-solid fa-eye me-2"></i> Preview</a></li>
+                          <li><a class="dropdown-item"><i class="fa-solid fa-print me-2"></i> Print</a></li>
+                          <li><a class="dropdown-item"><i class="fa-solid fa-download me-2"></i> Download</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Row 2 -->
+                  <tr>
+                    <td>2</td>
+                    <td>PS-2026-002</td>
+                    <td>PR-002</td>
+                    <td>01 Feb 2026</td>
+                    <td>
+                      <a href="#" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal"
+                        data-bs-target="#payrollBreakdownModal">
+                        <i class="fa-solid fa-file-pdf"></i> View
+                      </a>
+                    </td>
+                    <td><span class="badge bg-warning text-dark">Not Published</span></td>
+
+                    <td class="text-center">
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item">Preview</a></li>
+                          <li><a class="dropdown-item">Publish</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="payrollBreakdownModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content rounded-4 border-0 shadow">
+
+              <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold">Payslip Breakdown</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+
+                <div class="row g-2 mb-4 align-items-end">
+                  <div class="col-sm-4 col-12">
+                    <label class="form-label small fw-bold">Period</label>
+                    <select class="form-select form-select-sm" id="periodFilter">
+                      <option value="2025-01">2025-01</option>
+                      <option value="2025-02">2025-02</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4 col-12">
+                    <label class="form-label small fw-bold">Payslip</label>
+                    <select class="form-select form-select-sm" id="payslipFilter">
+                      <option value="PS-02545">PS-02545</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-2 col-6">
+                    <label class="form-label small fw-bold">Status</label>
+                    <select class="form-select form-select-sm" id="statusFilter">
+                      <option value="published">Published</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-2 col-6">
+                    <button class="btn btn-primary btn-sm w-100">Apply</button>
+                  </div>
+                </div>
+
+                <div id="payslip">
+
+
+
+                  <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 10px rgba(0,0,0,0.1)">
+
+
+
+                    <div class="text-white p-4 text-center" style="background:linear-gradient(90deg,#0f5132,#198754);">
+
+                      <div class="logos d-flex justify-content-between ">
+
+                        <img src="../assets/images/logo/logo_dark.png" alt="Tamam Logo" width="80px">
+
+                        <img src="../assets/images/logo/logo.png" alt="Company logo" width="80px">
+
+                      </div>
+
+                      <hr>
+
+                      <h2 class="text-white" style="margin:0">Employee Payslip</h2>
+
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-between">
+
+                      <div class="d-flex align-items-center gap-3 p-4">
+
+                        <div
+                          class="d-flex justify-content-center p-0 avatar rounded-circle overflow-hidden w-auto border border-4 border-primary"
+                          style="max-width: 80px;">
+
+                          <img class="p-2" src="../assets/images/avtar/avatar.jpg" width="100%" height="auto"
+                            alt="Emp Avatar">
+
                         </div>
 
-    <!-- Table -->
-    <div class="table-responsive">
-      <table class="table table-hover align-middle mb-0">
+                        <div class="emp">
 
-        <thead class="table-light">
-          <tr>
-            <th>ID</th>
-            <th>Payslip No</th>
-            <th>Payroll Record</th>
-            <th>Generated At</th>
-            <th>File Path</th>
-            <th>Published To</th>
-            <th class="text-center">Actions</th>
-          </tr>
-        </thead>
+                          <h3 style="margin-bottom:5px">Ahmed Faisal</h3>
 
-        <tbody>
+                          <span class="text-muted">EMP-00015</span>
 
-          <!-- Row 1 -->
-          <tr>
-            <td>1</td>
-            <td>PS-2026-001</td>
-            <td>PR-001</td>
-            <td>01 Feb 2026</td>
-            <td>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fa-solid fa-file-pdf"></i> View
-              </a>
-            </td>
-            <td><span class="badge bg-success">Published</span></td>
+                        </div>
 
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
+                      </div>
 
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item"><i class="fa-solid fa-eye me-2"></i> Preview</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-print me-2"></i> Print</a></li>
-                  <li><a class="dropdown-item"><i class="fa-solid fa-download me-2"></i> Download</a></li>
-                </ul>
+                      <div class="p-4">
+
+                        <h5>Period : <strong>2025-1</strong> | PS-2025-01</h5>
+
+                        <span class="badge bg-primary">Published</span>
+
+                      </div>
+
+
+
+                    </div>
+
+
+
+                    <div class="row g-3 p-4 pt-0 d-flex justify-content-center">
+
+
+
+                      <div class="col-6">
+
+                        <div class="p-3 rounded-3 bg-light text-dark h-100 shadow-sm border">
+
+                          <h5 class="mb-3 fw-bold border-bottom pb-2">Employee Information
+                          </h5>
+
+                          <p class="mb-1 text-muted">Job: <span class="text-dark fw-medium">Accountant</span></p>
+
+                          <p class="mb-1 text-muted">Branch: <span class="text-dark fw-medium">Main Branch</span></p>
+
+                          <p class="mb-1 text-muted">Department: <span class="text-dark fw-medium">Finance</span></p>
+
+                          <p class="mb-0 text-muted">Category: <span class="text-dark fw-medium">Permanent</span></p>
+
+                        </div>
+
+                      </div>
+
+
+
+                      <div class="col-6">
+
+                        <div class="p-3 rounded-3 bg-light text-dark h-100 shadow-sm border">
+
+                          <h5 class="mb-3 fw-bold border-bottom pb-2">Payroll Period</h5>
+
+                          <p class="mb-1 text-muted">Period: <span class="text-dark fw-medium">2024-12-26 →
+                              2025-01-25</span>
+                          </p>
+
+                          <p class="mb-1 text-muted">Payment Date: <span class="text-dark fw-medium">Jan 30, 2025</span>
+                          </p>
+
+                          <p class="mb-0 text-muted">Currency: <span class="text-dark fw-medium">SAR</span></p>
+
+                        </div>
+
+                      </div>
+
+
+
+                    </div>
+
+
+
+                    <div class="row g-3 px-4 pb-4">
+
+
+
+                      <div class="col-md-6">
+
+                        <div class="card h-100 border-0 shadow-sm border">
+
+                          <div class="card-header bg-white fw-bold py-3">
+
+                            Earnings
+
+                          </div>
+
+                          <div class="card-body p-0">
+
+                            <table class="table table-borderless mb-0">
+
+                              <tbody class="align-middle">
+
+                                <tr class="px-3">
+
+                                  <td class="ps-3">Basic Salary</td>
+
+                                  <td class="text-end pe-3">8,000</td>
+
+                                </tr>
+
+                                <tr>
+
+                                  <td class="ps-3">Housing</td>
+
+                                  <td class="text-end pe-3">2,000</td>
+
+                                </tr>
+
+                                <tr>
+
+                                  <td class="ps-3">Transport</td>
+
+                                  <td class="text-end pe-3">1,000</td>
+
+                                </tr>
+
+                                <tr>
+
+                                  <td class="ps-3">Overtime</td>
+
+                                  <td class="text-end pe-3">500</td>
+
+                                </tr>
+
+                              </tbody>
+
+                              <tfoot>
+
+                                <tr class="fw-bold border-top">
+
+                                  <td class="ps-3 py-3">Subtotal</td>
+
+                                  <td class="text-end pe-3 py-3">11,500</td>
+
+                                </tr>
+
+                              </tfoot>
+
+                            </table>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+
+
+                      <div class="col-md-6">
+
+                        <div class="card h-100 border-0 shadow-sm border">
+
+                          <div class="card-header bg-white fw-bold py-3">
+
+                            Deductions
+
+                          </div>
+
+                          <div class="card-body p-0">
+
+                            <table class="table table-borderless mb-0">
+
+                              <tbody class="align-middle">
+
+                                <tr>
+
+                                  <td class="ps-3">Absence</td>
+
+                                  <td class="text-end pe-3">250</td>
+
+                                </tr>
+
+                                <tr>
+
+                                  <td class="ps-3">Tax</td>
+
+                                  <td class="text-end pe-3">300</td>
+
+                                </tr>
+
+                                <tr>
+
+                                  <td class="ps-3">Insurance</td>
+
+                                  <td class="text-end pe-3">150</td>
+
+                                </tr>
+
+                              </tbody>
+
+                              <tfoot>
+
+                                <tr class="fw-bold border-top">
+
+                                  <td class="ps-3 py-3 text-danger">Subtotal</td>
+
+                                  <td class="text-end pe-3 py-3 text-danger">700</td>
+
+                                </tr>
+
+                              </tfoot>
+
+                            </table>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+
+
+                    </div>
+
+
+
+                    <div style="padding:20px">
+
+                      <div class="bg-primary text-white p-3 rounded-2 d-flex justify-content-between">
+
+                        <strong>Net Salary</strong>
+
+                        <strong>SAR 10,800</strong>
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+
+                </div>
               </div>
-            </td>
-          </tr>
-
-          <!-- Row 2 -->
-          <tr>
-            <td>2</td>
-            <td>PS-2026-002</td>
-            <td>PR-002</td>
-            <td>01 Feb 2026</td>
-            <td>
-              <a href="#" class="btn btn-sm btn-outline-dark">
-                <i class="fa-solid fa-file-pdf"></i> View
-              </a>
-            </td>
-            <td><span class="badge bg-warning text-dark">Not Published</span></td>
-
-            <td class="text-center">
-              <div class="dropdown">
-                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
+              <div class="modal-footer bg-light">
+                <button class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
+                <button class="btn btn-primary px-4" onclick="downloadPayslip()">
+                  <i class="fa-solid fa-file-pdf me-2"></i> Export PDF
                 </button>
-
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item">Preview</a></li>
-                  <li><a class="dropdown-item">Publish</a></li>
-                </ul>
               </div>
-            </td>
-          </tr>
 
-        </tbody>
+            </div>
+          </div>
+        </div>
 
-      </table>
-    </div>
-
-  </div>
-</div>
 
         <!-- footer start-->
       </div>
@@ -942,12 +1272,42 @@
   <script src="../assets/js/jsgrid/jsgrid.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <!-- Plugins JS Ends-->
   <!-- Theme js-->
   <script src="../assets/js/script.js"></script>
   <!--script(src='../assets/js/theme-customizer/customizer.js')-->
   <script>
     new WOW().init();
+  </script>
+  <script>
+    document.body.classList.add("printing");
+
+    function downloadPayslip() {
+
+      const element = document.getElementById("payslip");
+
+
+
+      const opt = {
+
+        margin: 5,
+
+        filename: 'payslip.pdf',
+
+        image: { type: 'jpeg', quality: 0.98 },
+
+        html2canvas: { scale: 2, useCORS: true },
+
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+
+      };
+
+
+
+      html2pdf().set(opt).from(element).save();
+
+    }
   </script>
 </body>
 
