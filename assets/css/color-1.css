@@ -62,14 +62,6 @@
 
 /* ***************Reports ********************* */
 
-/* .reports-cards .col-xl-4,
-.reports-cards .col-lg-6,
-.reports-cards .col-md-6,
-.reports-cards .col-12 {
-  display: flex;
-} */
-
-
 .report-card {
   display: flex;
   gap: 16px;

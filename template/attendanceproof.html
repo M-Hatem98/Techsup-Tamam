@@ -48,9 +48,24 @@
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen" />
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
+   <style>
+.tab-btn .card {
+  transition: 0.2s;
+}
+
+/* Hover Effect */
+.tab-btn:hover .card {
+  transform: translateY(-3px);
+}
+
+/* Active Style */
+.tab-btn.active .card {
+  border: 2px solid var(--theme-deafult) !important;
+}
+</style>
 </head>
 
-<body id="contractList">
+<body id="attindanceProof">
     <!-- loader starts-->
     <div class="loader-wrapper">
         <div class="loader">
@@ -898,134 +913,161 @@
             <div class="page-body">
 
                 <!-- Container-fluid starts-->
-                <div class="container-fluid my-5">
-   
-
+<div class="container-fluid my-5">
+    <div class="card shadow-lg border-0 rounded-4 p-3">
   <!-- Header -->
-  <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
     <div>
       <h3 class="fw-bold mb-1">Attendance Review</h3>
       <p class="text-muted mb-0">Review employee attendance submissions and approvals</p>
     </div>
 
-    <div class="d-flex gap-2">
-      <input type="text" class="form-control rounded-3" placeholder="Search employee..." style="width:250px;">
-      <select class="form-select rounded-3" style="width:180px;">
-        <option>All Statuses</option>
-        <option>Pending</option>
-        <option>Approved</option>
-        <option>Missed</option>
-      </select>
-    </div>
+    <button class="btn btn-primary rounded-3">
+      Send Attendance Proof
+      <i   class="fa-regular fa-bell"></i>
+    </button>
   </div>
 
-  <!-- Summary Cards -->
-  <div class="row g-3 mb-4">
+  <!-- Filters -->
+  <div class="d-flex flex-wrap gap-2 mb-4">
 
-    <div class="col-md-4">
-      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-warning">
-        <h6 class="text-muted mb-2">Pending Review</h6>
-        <h2 class="fw-bold text-warning mb-0">1</h2>
-      </div>
-    </div>
+    <input type="text" class="form-control rounded-3" placeholder="Search employee..." style="width:220px;">
 
-    <div class="col-md-4">
-      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success">
-        <h6 class="text-muted mb-2">Approved</h6>
-        <h2 class="fw-bold text-success mb-0">2</h2>
-      </div>
-    </div>
+    <select class="form-select rounded-3" style="width:160px;">
+      <option>All Branches</option>
+      <option>Cairo</option>
+      <option>Dammam</option>
+    </select>
 
-    <div class="col-md-4">
-      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-danger">
-        <h6 class="text-muted mb-2">Missed</h6>
-        <h2 class="fw-bold text-danger mb-0">4</h2>
-      </div>
-    </div>
+    <select class="form-select rounded-3" style="width:180px;">
+      <option>All Departments</option>
+      <option>HR</option>
+      <option>Accounting</option>
+      <option>Sales</option>
+    </select>
 
   </div>
 
-  <!-- Attendance Review Table -->
-  <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+  <!-- Tabs Cards -->
+  <div class="row g-3 mb-4 nav nav-tabs border-0" role="tablist">
 
-    <div class="table-responsive">
-      <table class="table align-middle mb-0">
-
-        <thead class="table-light">
-          <tr>
-            <th>Employee</th>
-            <th>Department</th>
-            <th>Check In</th>
-            <th>Check Out</th>
-            <th>Worked Hours</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>
-              <div class="d-flex align-items-center gap-3">
-                <div class="rounded-circle bg-success-subtle text-success fw-bold d-flex align-items-center justify-content-center"
-                     style="width:42px;height:42px;">T</div>
-                <div>
-                  <h6 class="mb-0">Tarik</h6>
-                  <small class="text-muted">EMP-001</small>
-                </div>
-              </div>
-            </td>
-            <td>Accounting</td>
-            <td>08:05 AM</td>
-            <td>05:00 PM</td>
-            <td>8.0</td>
-            <td><span class="badge bg-warning text-dark">Pending</span></td>
-          
-          </tr>
-
-          <tr>
-            <td>
-              <div class="d-flex align-items-center gap-3">
-                <div class="rounded-circle bg-primary-subtle text-primary fw-bold d-flex align-items-center justify-content-center"
-                     style="width:42px;height:42px;">M</div>
-                <div>
-                  <h6 class="mb-0">Mostafa</h6>
-                  <small class="text-muted">EMP-002</small>
-                </div>
-              </div>
-            </td>
-            <td>HR</td>
-            <td>08:00 AM</td>
-            <td>05:10 PM</td>
-            <td>8.2</td>
-            <td><span class="badge bg-success">Approved</span></td>
-         
-          </tr>
-
-          <tr>
-            <td>
-              <div class="d-flex align-items-center gap-3">
-                <div class="rounded-circle bg-danger-subtle text-danger fw-bold d-flex align-items-center justify-content-center"
-                     style="width:42px;height:42px;">I</div>
-                <div>
-                  <h6 class="mb-0">Islam Salah</h6>
-                  <small class="text-muted">EMP-003</small>
-                </div>
-              </div>
-            </td>
-            <td>Sales</td>
-            <td>-</td>
-            <td>-</td>
-            <td>0</td>
-            <td><span class="badge bg-danger">Missed</span></td>
-           
-          </tr>
-
-        </tbody>
-
-      </table>
+    <!-- Pending -->
+    <div class="col-md-4">
+      <button class="w-100 border-0 bg-transparent p-0  tab-btn active"
+              data-bs-toggle="tab"
+              data-bs-target="#pendingTab"
+              type="button">
+        <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-warning">
+          <h6 class="text-muted mb-2">Pending Review</h6>
+          <h2 class="fw-bold text-warning mb-0">1</h2>
+        </div>
+      </button>
     </div>
 
+    <!-- Approved -->
+    <div class="col-md-4">
+      <button class="w-100 border-0 bg-transparent p-0   tab-btn"
+              data-bs-toggle="tab"
+              data-bs-target="#approvedTab"
+              type="button">
+        <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success">
+          <h6 class="text-muted mb-2">Approved</h6>
+          <h2 class="fw-bold text-success mb-0">2</h2>
+        </div>
+      </button>
+    </div>
+
+    <!-- Missed -->
+    <div class="col-md-4">
+      <button class="w-100 border-0 bg-transparent p-0  tab-btn"
+              data-bs-toggle="tab"
+              data-bs-target="#missedTab"
+              type="button">
+        <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-danger">
+          <h6 class="text-muted mb-2">Missed</h6>
+          <h2 class="fw-bold text-danger mb-0">4</h2>
+        </div>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content">
+
+    <!-- Pending -->
+    <div class="tab-pane fade show active" id="pendingTab">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Employee</th>
+                <th>Branch</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tarik</td>
+                <td>Cairo</td>
+                <td>Accounting</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Approved -->
+    <div class="tab-pane fade" id="approvedTab">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Employee</th>
+                <th>Branch</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mostafa</td>
+                <td>Dammam</td>
+                <td>HR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Missed -->
+    <div class="tab-pane fade" id="missedTab">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Employee</th>
+                <th>Branch</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Islam Salah</td>
+                <td>Cairo</td>
+                <td>Sales</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
   </div>
 
 </div>
@@ -1074,6 +1116,26 @@
     <script>
         new WOW().init();
     </script>
+    <script>
+function switchTab(tab) {
+
+  // Hide all tables
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.add('d-none');
+  });
+
+  // Remove active from cards
+  document.querySelectorAll('.tab-card').forEach(el => {
+    el.classList.remove('active-tab');
+  });
+
+  // Show selected
+  document.getElementById(tab).classList.remove('d-none');
+
+  // Highlight active card
+  event.currentTarget.classList.add('active-tab');
+}
+</script>
    
 </body>
 
